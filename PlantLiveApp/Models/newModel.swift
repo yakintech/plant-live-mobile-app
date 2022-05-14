@@ -10,6 +10,7 @@ import SwiftUI
 struct newModel: View {
     var body: some View {
         Text("It's my first commit!")
+        Text("this is second commit")
     }
 }
 
