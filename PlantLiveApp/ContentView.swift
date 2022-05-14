@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    //Çağatay
     var body: some View {
         Text("Hello, world!")
             .padding()
