@@ -12,6 +12,7 @@ struct Plant : Hashable {
 
     var name : String = ""
     var description : String = ""
+    var image : String = ""
     var id : UUID = UUID()
 //    var category : Category = Category()
     

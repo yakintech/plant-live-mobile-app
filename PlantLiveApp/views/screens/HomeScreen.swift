@@ -12,16 +12,12 @@ struct HomeScreen: View {
         
         VStack{
 
-            NavigationLink(destination: PlantListScreen()){
-                
-                Text("Bitki Listesine Git!")
-                
-            }
-            .padding()
-            
-        
-            
-            
+//            NavigationLink(destination: PlantListScreen()){
+//                
+//                Text("Bitki Listesine Git!")
+//                
+//            }
+//            .padding()
             
             //            NavigationLink(destination: AboutScreen()) {
             //                Text("go to about screen")
