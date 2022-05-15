@@ -3,7 +3,7 @@
 //  PlantLiveApp
 //
 //  Created by Çağatay Yıldız on 15.05.2022.
-//
+// #colorLiteral(red: 0.188349992, green: 0.1137254902, blue: 0.9098039216, alpha: 1)
 
 import SwiftUI
 
