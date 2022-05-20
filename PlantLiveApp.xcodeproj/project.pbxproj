@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03AB197E283793180095DC2D /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB197D283793170095DC2D /* ProfilePage.swift */; };
+		03AB1980283799030095DC2D /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB197F283799030095DC2D /* ChangePassword.swift */; };
 		1D3A366F282FB0E800021F30 /* PlantLiveAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3A366E282FB0E800021F30 /* PlantLiveAppApp.swift */; };
 		1D3A3671282FB0E800021F30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3A3670282FB0E800021F30 /* ContentView.swift */; };
 		1D3A3673282FB0EA00021F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D3A3672282FB0EA00021F30 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03AB197D283793170095DC2D /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		03AB197F283799030095DC2D /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		1D3A366B282FB0E800021F30 /* PlantLiveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantLiveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3A366E282FB0E800021F30 /* PlantLiveAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantLiveAppApp.swift; sourceTree = "<group>"; };
 		1D3A3670282FB0E800021F30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				1D5B9C712830E86A002698E9 /* AboutScreen.swift */,
 				1D5B9C732830F44E002698E9 /* PlantDetail.swift */,
 				1D5B9C752830FA1C002698E9 /* PlantListScreen.swift */,
+				03AB197D283793170095DC2D /* ProfilePage.swift */,
+				03AB197F283799030095DC2D /* ChangePassword.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -179,7 +185,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03AB197E283793180095DC2D /* ProfilePage.swift in Sources */,
 				1D3A3671282FB0E800021F30 /* ContentView.swift in Sources */,
+				03AB1980283799030095DC2D /* ChangePassword.swift in Sources */,
 				1D5B9C702830E823002698E9 /* HomeScreen.swift in Sources */,
 				1D5B9C6C2830E465002698E9 /* Plant.swift in Sources */,
 				1D5B9C762830FA1C002698E9 /* PlantListScreen.swift in Sources */,

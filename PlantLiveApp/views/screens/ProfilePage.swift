@@ -1,0 +1,75 @@
+import SwiftUI
+
+struct ProfilePage: View {
+  
+  init(){
+    UITableView.appearance().backgroundColor = .clear
+  }
+  @State private var firstName = "Radagast"
+  @State private var lastName = "Brown"
+  @State private var mail = "radagastbrown@gmail.com"
+  
+  var body: some View {
+    NavigationView {
+      VStack {
+        Image("profileimage")
+          .resizable()
+          .frame(width: 140, height: 140)
+          .clipShape(Circle())
+          .padding()
+        Button("Change Profile Photo") {
+          //Change Photo
+        }
+        .padding()
+        
+        Form {
+          HStack {
+            Image(systemName: "person.fill")
+              .padding(.horizontal, 8.0)
+            Divider()
+            TextField("First Name", text: $firstName)
+              .disableAutocorrection(true)
+              .autocapitalization(.none)
+          }
+          HStack {
+            Image(systemName: "person.3.fill")
+            Divider()
+            TextField("Last Name", text: $lastName)
+              .disableAutocorrection(true)
+              .autocapitalization(.none)
+          }
+          HStack {
+            Image(systemName: "envelope")
+              .padding(.horizontal, 7.0)
+            Divider()
+            TextField("Email", text: $mail)
+          }
+        }
+        
+        NavigationLink(destination: ChangePassword()) {
+          Text("Change Password")
+            .fontWeight(.regular)
+            .padding()
+            .foregroundColor(.red)
+            .font(.title3)
+        }
+        
+        Spacer()
+          .navigationBarTitle(Text("Edit Profile"), displayMode: .inline)
+          .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+              Button("Done") {
+                //Done
+              }
+            }
+          }
+      }
+    }
+  }
+}
+
+struct ProfilePage_Previews: PreviewProvider {
+  static var previews: some View {
+    ProfilePage()
+  }
+}
