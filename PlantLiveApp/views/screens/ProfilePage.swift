@@ -12,7 +12,7 @@ struct ProfilePage: View {
   var body: some View {
     NavigationView {
       VStack {
-        Image("profileimage")
+        Image("profilepage")
           .resizable()
           .frame(width: 140, height: 140)
           .clipShape(Circle())
@@ -20,7 +20,8 @@ struct ProfilePage: View {
         Button("Change Profile Photo") {
           //Change Photo
         }
-        .padding()
+        
+        Divider()
         
         Form {
           HStack {
@@ -45,11 +46,11 @@ struct ProfilePage: View {
             TextField("Email", text: $mail)
           }
         }
-        
+        Divider()
         NavigationLink(destination: ChangePassword()) {
           Text("Change Password")
             .fontWeight(.regular)
-            .padding()
+            .padding(.bottom, 20)
             .foregroundColor(.red)
             .font(.title3)
         }
