@@ -9,6 +9,7 @@ struct ProfilePage: View {
   @State private var lastName = "Brown"
   @State private var mail = "radagastbrown@gmail.com"
   
+  
   var body: some View {
     NavigationView {
       VStack {

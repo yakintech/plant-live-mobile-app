@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChangePassword: View {
   
-  @State private var password = "1234"
+  @State var password = UserDefaults.standard.string(forKey: "SavePassword")!
   @State private var isSecure: Bool = true
   @Environment(\.presentationMode) var presentationMode
   
@@ -46,8 +46,12 @@ struct ChangePassword: View {
         }
         .padding(.bottom)
         Button("Done") {
+          print("deneme")
+          UserDefaults.standard.set(password, forKey: "SavePassword")
+          self.password = UserDefaults.standard.string(forKey: "SavePassword")!
           presentationMode.wrappedValue.dismiss()
         }
+        
         Spacer()
       }
       .navigationBarTitle(Text("Chnage Password"), displayMode: .inline)
