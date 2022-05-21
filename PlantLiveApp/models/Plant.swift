@@ -17,3 +17,11 @@ struct Plant : Hashable {
 //    var category : Category = Category()
     
 }
+
+struct tipType : Hashable{
+    var name : String = ""
+    var image : String = ""
+    var id : UUID = UUID()
+
+}
+

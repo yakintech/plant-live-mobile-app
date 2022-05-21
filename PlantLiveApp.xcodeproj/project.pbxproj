@@ -19,6 +19,7 @@
 		1D5B9C722830E86A002698E9 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B9C712830E86A002698E9 /* AboutScreen.swift */; };
 		1D5B9C742830F44E002698E9 /* PlantDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B9C732830F44E002698E9 /* PlantDetail.swift */; };
 		1D5B9C762830FA1C002698E9 /* PlantListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B9C752830FA1C002698E9 /* PlantListScreen.swift */; };
+		1DCB70B52838DA41000DA5EC /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB70B42838DA41000DA5EC /* CategoryList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		1D5B9C712830E86A002698E9 /* AboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
 		1D5B9C732830F44E002698E9 /* PlantDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetail.swift; sourceTree = "<group>"; };
 		1D5B9C752830FA1C002698E9 /* PlantListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListScreen.swift; sourceTree = "<group>"; };
+		1DCB70B42838DA41000DA5EC /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				1D5B9C752830FA1C002698E9 /* PlantListScreen.swift */,
 				03AB197D283793170095DC2D /* ProfilePage.swift */,
 				03AB197F283799030095DC2D /* ChangePassword.swift */,
+				1DCB70B42838DA41000DA5EC /* CategoryList.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DCB70B52838DA41000DA5EC /* CategoryList.swift in Sources */,
 				03AB197E283793180095DC2D /* ProfilePage.swift in Sources */,
 				1D3A3671282FB0E800021F30 /* ContentView.swift in Sources */,
 				03AB1980283799030095DC2D /* ChangePassword.swift in Sources */,
@@ -322,10 +326,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlantLiveApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 5WJ6D6989G;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -340,6 +345,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cagatayyildiz.PlantLiveApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -351,7 +357,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlantLiveApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 5WJ6D6989G;
@@ -369,6 +376,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cagatayyildiz.PlantLiveApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "XC Ad Hoc: *";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
