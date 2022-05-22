@@ -24,6 +24,7 @@ struct CategoryList: View {
             
             let url = URL(string: "https://northwind.vercel.app/api/categories")!
             
+            
             URLSession.shared.dataTask(with: url){(data, response, error) in
                 
                 do{
