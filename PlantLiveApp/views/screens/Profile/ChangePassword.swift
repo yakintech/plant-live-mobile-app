@@ -46,7 +46,6 @@ struct ChangePassword: View {
         }
         .padding(.bottom)
         Button("Done") {
-          print("deneme")
           UserDefaults.standard.set(password, forKey: "SavePassword")
           self.password = UserDefaults.standard.string(forKey: "SavePassword")!
           presentationMode.wrappedValue.dismiss()

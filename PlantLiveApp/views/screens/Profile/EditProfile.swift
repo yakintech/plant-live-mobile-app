@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ProfilePage: View {
+struct EditProfile: View {
   
   init(){
     UITableView.appearance().backgroundColor = .clear
@@ -72,6 +72,6 @@ struct ProfilePage: View {
 
 struct ProfilePage_Previews: PreviewProvider {
   static var previews: some View {
-    ProfilePage()
+    EditProfile()
   }
 }

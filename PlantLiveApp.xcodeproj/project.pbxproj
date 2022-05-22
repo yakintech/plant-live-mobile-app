@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		03AB197E283793180095DC2D /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB197D283793170095DC2D /* ProfilePage.swift */; };
 		03AB1980283799030095DC2D /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB197F283799030095DC2D /* ChangePassword.swift */; };
+		03B2685A283A7BCF00CAAA68 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B26859283A7BCF00CAAA68 /* EditProfile.swift */; };
 		1D3A366F282FB0E800021F30 /* PlantLiveAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3A366E282FB0E800021F30 /* PlantLiveAppApp.swift */; };
 		1D3A3671282FB0E800021F30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3A3670282FB0E800021F30 /* ContentView.swift */; };
 		1D3A3673282FB0EA00021F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D3A3672282FB0EA00021F30 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		03AB197D283793170095DC2D /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		03AB197F283799030095DC2D /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
+		03B26859283A7BCF00CAAA68 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
 		1D3A366B282FB0E800021F30 /* PlantLiveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantLiveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3A366E282FB0E800021F30 /* PlantLiveAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantLiveAppApp.swift; sourceTree = "<group>"; };
 		1D3A3670282FB0E800021F30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03B2685B283A7BF900CAAA68 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				03AB197D283793170095DC2D /* ProfilePage.swift */,
+				03B26859283A7BCF00CAAA68 /* EditProfile.swift */,
+				03AB197F283799030095DC2D /* ChangePassword.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		1D3A3662282FB0E700021F30 = {
 			isa = PBXGroup;
 			children = (
@@ -127,8 +139,7 @@
 				1D5B9C712830E86A002698E9 /* AboutScreen.swift */,
 				1D5B9C732830F44E002698E9 /* PlantDetail.swift */,
 				1D5B9C752830FA1C002698E9 /* PlantListScreen.swift */,
-				03AB197D283793170095DC2D /* ProfilePage.swift */,
-				03AB197F283799030095DC2D /* ChangePassword.swift */,
+				03B2685B283A7BF900CAAA68 /* Profile */,
 				1DCB70B42838DA41000DA5EC /* CategoryList.swift */,
 				1DCB70B62838FFFF000DA5EC /* AddCategory.swift */,
 				1DB7545D283A1EBF00E9ABB9 /* ProductListScreen.swift */,
@@ -239,6 +250,7 @@
 				DDF85B3A283A484600BCA528 /* tabView.swift in Sources */,
 				1DCB70B72838FFFF000DA5EC /* AddCategory.swift in Sources */,
 				1DB75460283A1EEB00E9ABB9 /* Product.swift in Sources */,
+				03B2685A283A7BCF00CAAA68 /* EditProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
