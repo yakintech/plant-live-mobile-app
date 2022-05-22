@@ -24,6 +24,7 @@
 		1DB75460283A1EEB00E9ABB9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7545F283A1EEB00E9ABB9 /* Product.swift */; };
 		1DCB70B52838DA41000DA5EC /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB70B42838DA41000DA5EC /* CategoryList.swift */; };
 		1DCB70B72838FFFF000DA5EC /* AddCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB70B62838FFFF000DA5EC /* AddCategory.swift */; };
+		430DE3F3283A4C6A008760A3 /* ForgotPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430DE3F2283A4C6A008760A3 /* ForgotPasswordScreen.swift */; };
 		DDF85B3A283A484600BCA528 /* tabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF85B39283A484600BCA528 /* tabView.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		1DB7545F283A1EEB00E9ABB9 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		1DCB70B42838DA41000DA5EC /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
 		1DCB70B62838FFFF000DA5EC /* AddCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategory.swift; sourceTree = "<group>"; };
+		430DE3F2283A4C6A008760A3 /* ForgotPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordScreen.swift; sourceTree = "<group>"; };
 		DDF85B39283A484600BCA528 /* tabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 				1DCB70B42838DA41000DA5EC /* CategoryList.swift */,
 				1DCB70B62838FFFF000DA5EC /* AddCategory.swift */,
 				1DB7545D283A1EBF00E9ABB9 /* ProductListScreen.swift */,
+				430DE3F2283A4C6A008760A3 /* ForgotPasswordScreen.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				1D5B9C762830FA1C002698E9 /* PlantListScreen.swift in Sources */,
 				1D3A366F282FB0E800021F30 /* PlantLiveAppApp.swift in Sources */,
 				1D5B9C722830E86A002698E9 /* AboutScreen.swift in Sources */,
+				430DE3F3283A4C6A008760A3 /* ForgotPasswordScreen.swift in Sources */,
 				1D5B9C742830F44E002698E9 /* PlantDetail.swift in Sources */,
 				1D5B9C6A2830E22F002698E9 /* Category.swift in Sources */,
 				1DB7545E283A1EBF00E9ABB9 /* ProductListScreen.swift in Sources */,
