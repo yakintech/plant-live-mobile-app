@@ -5,15 +5,14 @@ struct EditProfile: View {
   init(){
     UITableView.appearance().backgroundColor = .clear
   }
-  @State private var firstName = "Radagast"
-  @State private var lastName = "Brown"
-  @State private var mail = "radagastbrown@gmail.com"
-  
+  @State private var firstName = "Jack"
+  @State private var lastName = "Harlow"
+  @State private var mail = "jackharlow@gmail.com"
   
   var body: some View {
     NavigationView {
       VStack {
-        Image("profilepage")
+        Image("jackHarlow")
           .resizable()
           .frame(width: 140, height: 140)
           .clipShape(Circle())

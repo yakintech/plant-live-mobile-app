@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct ChangePassword: View {
-  
-  @State var password = UserDefaults.standard.string(forKey: "SavePassword")!
+
+  @State var password = "1234"
   @State private var isSecure: Bool = true
   @Environment(\.presentationMode) var presentationMode
-  
+
   var body: some View {
     NavigationView {
       VStack {
-        
+
         Text("Old Password")
           .multilineTextAlignment(.leading)
           .foregroundColor(.gray)
           .padding(.top)
           .offset(x: -120, y: 15)
-        
+
         HStack {
           if isSecure {
             SecureField("Password", text: $password)
@@ -46,11 +46,9 @@ struct ChangePassword: View {
         }
         .padding(.bottom)
         Button("Done") {
-          UserDefaults.standard.set(password, forKey: "SavePassword")
-          self.password = UserDefaults.standard.string(forKey: "SavePassword")!
           presentationMode.wrappedValue.dismiss()
         }
-        
+
         Spacer()
       }
       .navigationBarTitle(Text("Chnage Password"), displayMode: .inline)
