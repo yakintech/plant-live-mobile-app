@@ -61,7 +61,7 @@ struct ContentView: View {
                 .badge(5)
             
             
-            Text("Profile")
+            ProfilePage()
                 .tabItem {
                     Image(systemName: "brain.head.profile")
                     Text("Profile")

@@ -8,6 +8,7 @@ struct EditProfile: View {
   @State private var firstName = "Jack"
   @State private var lastName = "Harlow"
   @State private var mail = "jackharlow@gmail.com"
+  @Environment(\.presentationMode) var presentationMode
   
   var body: some View {
     NavigationView {
@@ -16,7 +17,7 @@ struct EditProfile: View {
           .resizable()
           .frame(width: 140, height: 140)
           .clipShape(Circle())
-          .padding()
+          .padding([.leading, .bottom, .trailing])
         Button("Change Profile Photo") {
           //Change Photo
         }
@@ -56,14 +57,16 @@ struct EditProfile: View {
         }
         
         Spacer()
-          .navigationBarTitle(Text("Edit Profile"), displayMode: .inline)
-          .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-              Button("Done") {
-                //Done
-              }
-            }
+        
+      }
+      .navigationBarTitle(Text("Edit Profile"), displayMode: .inline)
+      .navigationBarBackButtonHidden(true)
+      .toolbar {
+        ToolbarItem(placement: .navigationBarTrailing) {
+          Button("Done") {
+            presentationMode.wrappedValue.dismiss()
           }
+        }
       }
     }
   }
