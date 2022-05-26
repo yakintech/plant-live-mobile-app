@@ -10,45 +10,65 @@ import SwiftUI
 struct ProfilePlantList: View {
   
   @State var plants : [Plant] = [
-    Plant(name: "Outdoor", description: "Çok severiz", image: "lotus"),
-    Plant(name: "Indoor", description: "Çok yaşar", image: "indoorPlant"),
-    Plant(name: "Garden", description: "Bejamin Button", image: "ot"),
-    Plant(name: "Flowering Plants", description: "Su istemez", image: "cicek"),
-    Plant(name: "Green Plants", description: "çok pahalı...", image: "greenPlant"),
-    Plant(name: "Cactus", description: "çok pahalı...", image: "cactus"),
-    Plant(name: "Trees", description: "çok pahalı...", image: "tree"),
-    Plant(name: "Agricultural Crops", description: "çok pahalı...", image: "seftali")
+    Plant(name: "Outdoor",  image: "lotus"),
+    Plant(name: "Indoor",  image: "indoorPlant"),
+    Plant(name: "Garden",  image: "ot"),
+    Plant(name: "Flowering Plants",  image: "cicek"),
+    Plant(name: "Green Plants",  image: "greenPlant"),
+    Plant(name: "Cactus",  image: "cactus"),
+    Plant(name: "Trees", image: "tree"),
+    Plant(name: "Agricultural Crops",  image: "seftali")
   ]
+  @State private var isPressed = false
   
   var body: some View {
     
-    ScrollView {
-      ForEach(plants, id:\.self) { item in
-        
-        NavigationLink(destination: PlantDetail(name: item.name, description: item.description)){
+    VStack {
+      HStack {
+        Text("My Garden")
+          .font(.body)
+          .fontWeight(.black)
+          .foregroundColor(Color("defaultgreen"))
+        Spacer()
+        Button(action: {
+          isPressed.toggle()
+
           
-          VStack{
-            RoundedRectangle(cornerRadius: 20)
-              .fill(LinearGradient(colors: [Color("defaultgreen"), Color("olivine")], startPoint: .topLeading, endPoint: .bottomTrailing))
-              .frame(width: .infinity, height: 80)
-              .padding(5)
-              .overlay(
-                HStack {
-                  Text(item.name)
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.white)
-                    .padding()
-                  Spacer()
-                  Image(item.image)
-                    .resizable()
-                    .frame(width: 90, height: 100, alignment: .leading)
-                  
-                  
-                }
-                  .padding(.horizontal))
+        }) {
+          Image(systemName: isPressed ? "star.fill" : "star")
+            .foregroundColor(Color("defaultgreen"))
+            .imageScale(.large)
+        }
+      }.padding(.horizontal)
+      
+      Divider().background(Color("defaultgreen"))
+      
+      ScrollView(showsIndicators: false) {
+        ForEach(plants, id:\.self) { item in
+          
+          NavigationLink(destination: PlantDetail(name: item.name, description: item.description)){
+            
+            VStack{
+              RoundedRectangle(cornerRadius: 20)
+                .fill(LinearGradient(colors: [Color("defaultgreen"), Color("olivine")], startPoint: .topLeading, endPoint: .bottomTrailing))
+                .frame(width: 360, height: 80)
+                .padding(5)
+                .overlay(
+                  HStack {
+                    Text(item.name)
+                      .font(.title2)
+                      .fontWeight(.bold)
+                      .foregroundColor(Color.white)
+                      .padding()
+                    Spacer()
+                    Image(item.image)
+                      .resizable()
+                      .frame(width: 90, height: 100, alignment: .leading)
+                  }
+                    .padding(.horizontal))
+            }
+            .padding(.horizontal)
           }
-          .padding(.horizontal)
         }
       }
     }
