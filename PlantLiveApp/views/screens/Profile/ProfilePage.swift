@@ -43,7 +43,11 @@ struct ProfilePage: View {
             }
           }.padding(.horizontal)
           
+          Divider().background(Color("defaultgreen"))
+          
+          
           ProfilePlantList()
+            .offset(y: -8)
           
         }
       }

@@ -11,15 +11,13 @@ struct ProfilePlantList: View {
   
   @State var plants = ["cicek", "grass", "ot2", "greenPlant", "lotus", "indoorPlant", "ot", "cactus"]
   
-  let columns = [GridItem(.flexible()),
-                 GridItem(.flexible())
+  let columns = [GridItem(spacing: -10),
+                 GridItem()
   ]
   
   var body: some View {
     
     VStack {
-      Divider().background(Color("defaultgreen"))
-      
       ScrollView(showsIndicators: false) {
         Spacer()
         
@@ -40,11 +38,12 @@ struct ProfilePlantList: View {
                   .cornerRadius(20)
                   .foregroundColor(.white)
               }
+              .padding(.top)
             }
           }
         }
       }
-      .padding()
+      
     }
     .background(Color("mintcream"))
   }
