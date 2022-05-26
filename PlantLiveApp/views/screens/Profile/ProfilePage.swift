@@ -3,7 +3,7 @@ import SwiftUI
 struct ProfilePage: View {
   
   @State private var fullName = "Jack Harlow"
-  
+  @State private var isPressed = false
   
   var body: some View {
     NavigationView {
@@ -28,6 +28,20 @@ struct ProfilePage: View {
               }
             }
           }
+          HStack {
+            Text("My Garden")
+              .font(.body)
+              .fontWeight(.black)
+              .foregroundColor(Color("defaultgreen"))
+            Spacer()
+            Button(action: {
+              isPressed.toggle()
+            }) {
+              Image(systemName: isPressed ? "star.fill" : "star")
+                .foregroundColor(Color("defaultgreen"))
+                .imageScale(.large)
+            }
+          }.padding(.horizontal)
           
           ProfilePlantList()
           
