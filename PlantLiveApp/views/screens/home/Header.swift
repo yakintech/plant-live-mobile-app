@@ -26,9 +26,9 @@ struct Header: View {
             
             
             VStack {
-                TextField("Search", text: $search)
+                TextField("Search", text: $search).padding(.horizontal)
                 Rectangle()
-                    .frame(width: 280, height: 0.7, alignment: .bottom)
+                    .frame(width: 270, height: 0.7, alignment: .bottom)
                     .foregroundColor(Color(
                         red: 104/255,
                         green: 141/255,
@@ -51,6 +51,8 @@ struct Header: View {
             
             
         }.padding()
+            .padding(.trailing, 5.5)
+       
         
         
     }

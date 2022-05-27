@@ -29,6 +29,11 @@
 		1DD3B551283A512500C21EF7 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD3B550283A512500C21EF7 /* Header.swift */; };
 		430DE3F3283A4C6A008760A3 /* ForgotPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430DE3F2283A4C6A008760A3 /* ForgotPasswordScreen.swift */; };
 		DDF85B3A283A484600BCA528 /* tabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF85B39283A484600BCA528 /* tabView.swift */; };
+		DDFB4B7A2840F1180035ADB2 /* tabbarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB4B792840F1180035ADB2 /* tabbarScreen.swift */; };
+		DDFB4B7C2840F4A60035ADB2 /* tabViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB4B7B2840F4A60035ADB2 /* tabViewScreen.swift */; };
+		DDFB4B7E2840F51C0035ADB2 /* tipsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB4B7D2840F51C0035ADB2 /* tipsScreen.swift */; };
+		DDFB4B802840F5CD0035ADB2 /* categoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB4B7F2840F5CD0035ADB2 /* categoryScreen.swift */; };
+		DDFB4B822840F6F10035ADB2 /* homeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB4B812840F6F00035ADB2 /* homeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,11 @@
 		1DD3B550283A512500C21EF7 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		430DE3F2283A4C6A008760A3 /* ForgotPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordScreen.swift; sourceTree = "<group>"; };
 		DDF85B39283A484600BCA528 /* tabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabView.swift; sourceTree = "<group>"; };
+		DDFB4B792840F1180035ADB2 /* tabbarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbarScreen.swift; sourceTree = "<group>"; };
+		DDFB4B7B2840F4A60035ADB2 /* tabViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabViewScreen.swift; sourceTree = "<group>"; };
+		DDFB4B7D2840F51C0035ADB2 /* tipsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsScreen.swift; sourceTree = "<group>"; };
+		DDFB4B7F2840F5CD0035ADB2 /* categoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryScreen.swift; sourceTree = "<group>"; };
+		DDFB4B812840F6F00035ADB2 /* homeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +148,7 @@
 		1D5B9C6E2830E80E002698E9 /* screens */ = {
 			isa = PBXGroup;
 			children = (
+				430DE3F2283A4C6A008760A3 /* ForgotPasswordScreen.swift */,
 				1DD3B54F283A50F900C21EF7 /* home */,
 				1D5B9C712830E86A002698E9 /* AboutScreen.swift */,
 				1D5B9C732830F44E002698E9 /* PlantDetail.swift */,
@@ -146,7 +157,6 @@
 				1DCB70B42838DA41000DA5EC /* CategoryList.swift */,
 				1DCB70B62838FFFF000DA5EC /* AddCategory.swift */,
 				1DB7545D283A1EBF00E9ABB9 /* ProductListScreen.swift */,
-				430DE3F2283A4C6A008760A3 /* ForgotPasswordScreen.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -156,6 +166,11 @@
 			children = (
 				1D5B9C6F2830E823002698E9 /* HomeScreen.swift */,
 				1DD3B550283A512500C21EF7 /* Header.swift */,
+				DDFB4B792840F1180035ADB2 /* tabbarScreen.swift */,
+				DDFB4B7B2840F4A60035ADB2 /* tabViewScreen.swift */,
+				DDFB4B7D2840F51C0035ADB2 /* tipsScreen.swift */,
+				DDFB4B7F2840F5CD0035ADB2 /* categoryScreen.swift */,
+				DDFB4B812840F6F00035ADB2 /* homeView.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -237,9 +252,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DCB70B52838DA41000DA5EC /* CategoryList.swift in Sources */,
+				DDFB4B7A2840F1180035ADB2 /* tabbarScreen.swift in Sources */,
 				03AB197E283793180095DC2D /* ProfilePage.swift in Sources */,
 				1D3A3671282FB0E800021F30 /* ContentView.swift in Sources */,
 				03AB1980283799030095DC2D /* ChangePassword.swift in Sources */,
+				DDFB4B822840F6F10035ADB2 /* homeView.swift in Sources */,
 				1D5B9C702830E823002698E9 /* HomeScreen.swift in Sources */,
 				1D5B9C6C2830E465002698E9 /* Plant.swift in Sources */,
 				1DD3B551283A512500C21EF7 /* Header.swift in Sources */,
@@ -250,11 +267,14 @@
 				430DE3F3283A4C6A008760A3 /* ForgotPasswordScreen.swift in Sources */,
 				1D5B9C742830F44E002698E9 /* PlantDetail.swift in Sources */,
 				1D5B9C6A2830E22F002698E9 /* Category.swift in Sources */,
+				DDFB4B802840F5CD0035ADB2 /* categoryScreen.swift in Sources */,
 				1DB7545E283A1EBF00E9ABB9 /* ProductListScreen.swift in Sources */,
+				DDFB4B7C2840F4A60035ADB2 /* tabViewScreen.swift in Sources */,
 				DDF85B3A283A484600BCA528 /* tabView.swift in Sources */,
 				1DCB70B72838FFFF000DA5EC /* AddCategory.swift in Sources */,
 				1DB75460283A1EEB00E9ABB9 /* Product.swift in Sources */,
 				03B2685A283A7BCF00CAAA68 /* EditProfile.swift in Sources */,
+				DDFB4B7E2840F51C0035ADB2 /* tipsScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
