@@ -38,60 +38,62 @@ struct PlantDetail: View {
                             .shadow(radius: 20)
                     }
                     VStack{
-                        ScrollView(.horizontal){
+                        ScrollView(.horizontal, showsIndicators: false){
                             HStack{
                                 VStack{
                                     Image(systemName: "sun.max")
                                         .resizable()
-                                        .frame(width: 40, height: 40)
+                                        .frame(width: 30, height: 30)
                                         .foregroundColor(Color(red: 0.41, green: 0.55, blue: 0.27))
                                     Text("Full Sun")
                                         .opacity(0.7)
-                                }.frame(width: 100, height: 100)
+                                }.frame(width: 85, height: 85)
                                 .background(.white)
                                 .cornerRadius(15)
                                 VStack{
                                     Image(systemName: "drop")
                                         .resizable()
-                                        .frame(width: 40, height: 40)
+                                        .frame(width: 20, height: 30)
                                         .foregroundColor(Color(red: 0.41, green: 0.55, blue: 0.27))
                                     Text("Drained")
                                         .opacity(0.7)
-                                }.frame(width: 100, height: 100)
+                                }.frame(width: 85, height: 85)
                                 .background(.white)
                                 .cornerRadius(15)
                                 VStack{
                                     Image(systemName: "ruler")
                                         .resizable()
-                                        .frame(width: 70, height: 40)
+                                        .frame(width: 50, height: 30)
                                         .foregroundColor(Color(red: 0.41, green: 0.55, blue: 0.27))
                                     Text("30 x 50")
                                         .opacity(0.7)
-                                }.frame(width: 100, height: 100)
+                                }.frame(width: 85, height: 85)
                                 .background(.white)
                                 .cornerRadius(15)
                                 VStack{
                                     Image(systemName: "thermometer")
                                         .resizable()
-                                        .frame(width: 40, height: 40)
+                                        .frame(width: 20, height: 30)
                                         .foregroundColor(Color(red: 0.41, green: 0.55, blue: 0.27))
                                     Text("14° - 30°")
                                         .opacity(0.7)
-                                }.frame(width: 100, height: 100)
+                                }.frame(width: 85, height: 85)
                                 .background(.white)
                                 .cornerRadius(15)
                                 VStack{
                                     Image(systemName: "globe.europe.africa")
                                         .resizable()
-                                        .frame(width: 40, height: 40)
+                                        .frame(width: 30, height: 30)
                                         .foregroundColor(Color(red: 0.41, green: 0.55, blue: 0.27))
                                     Text("Türkiye")
                                         .opacity(0.7)
-                                }.frame(width: 100, height: 100)
+                                }.frame(width: 85, height: 85)
                                 .background(.white)
                                 .cornerRadius(15)
                             }
                         }.shadow(radius: 20)
+                            .frame(width: 375, height: 30, alignment: .center)
+                            .padding()
                             .opacity(0.8)
                         
                         ScrollView(.vertical){
@@ -129,4 +131,3 @@ struct PlantDetail_Previews: PreviewProvider {
         PlantDetail(name: "Deve Tabani" , description: "Deve tabanı çiçeği; karakteristik ve belirgin kesiklere sahip olan yapraklarının uzunluğu 40 ile 60 santimetre aralığındadır. Yaklaşık olarak 30 santimetre tek gövdesi üzerinde birkaç tane delikli formda yaprakları bulunur. İdeal ortam bulunduğu zaman uzunluğu 5 metreye dek ulaşabilir.")
     }
 }
-
