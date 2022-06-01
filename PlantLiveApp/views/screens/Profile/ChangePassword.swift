@@ -14,7 +14,7 @@ struct ChangePassword: View {
   @Environment(\.presentationMode) var presentationMode
 
   var body: some View {
-    NavigationView {
+
       VStack {
 
         Text("Old Password")
@@ -55,7 +55,7 @@ struct ChangePassword: View {
       .padding(.vertical)
     }
   }
-}
+
 
 struct ChangePassword_Previews: PreviewProvider {
   static var previews: some View {

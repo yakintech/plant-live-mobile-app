@@ -18,7 +18,11 @@ struct ProfilePlantList: View {
   var body: some View {
     
     VStack {
+      
+      Divider()
+      
       ScrollView(showsIndicators: false) {
+        
         Spacer()
         
         LazyVGrid(columns: columns, spacing: 10) {
@@ -38,12 +42,10 @@ struct ProfilePlantList: View {
                   .cornerRadius(20)
                   .foregroundColor(.white)
               }
-              .padding(.top)
             }
           }
         }
       }
-      
     }
     .background(Color("mintcream"))
   }

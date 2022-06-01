@@ -11,7 +11,6 @@ struct EditProfile: View {
   @Environment(\.presentationMode) var presentationMode
   
   var body: some View {
-    NavigationView {
       ZStack {
         VStack {
           Image("jackHarlow")
@@ -52,11 +51,9 @@ struct EditProfile: View {
           NavigationLink(destination: ChangePassword()) {
             Text("Change Password")
               .fontWeight(.regular)
-              .padding(.bottom, 20)
               .foregroundColor(.red)
               .font(.title3)
           }
-          
           Spacer()
         }
       }
@@ -71,7 +68,7 @@ struct EditProfile: View {
       }
     }
   }
-}
+
 
 struct ProfilePage_Previews: PreviewProvider {
   static var previews: some View {
