@@ -53,6 +53,7 @@ struct EditProfile: View {
               .fontWeight(.regular)
               .foregroundColor(.red)
               .font(.title3)
+              .padding(.bottom)
           }
           Spacer()
         }
