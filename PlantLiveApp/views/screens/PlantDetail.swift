@@ -117,13 +117,20 @@ struct PlantDetail: View {
                                         Spacer()
                                         Image(systemName: "heart")
                                             .padding()
-                                        Image(systemName: "square.and.arrow.up")
-                                            .padding()
+            Button(action: actionSheet) {
+                            Image(systemName: "square.and.arrow.up")
+                    .padding(.trailing)
+                        }
                                     }.foregroundColor(.white)
                                         .frame(width: 375, height: 10)
                                         .padding())
         
     }
+    func actionSheet() {
+            guard let urlShare = URL(string: "https://developer.apple.com/xcode/swiftui/") else { return }
+            let activityVC = UIActivityViewController(activityItems: [urlShare], applicationActivities: nil)
+            UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+        }
 }
 
 struct PlantDetail_Previews: PreviewProvider {
