@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PlantsList : Codable, Hashable {
+struct PlantsList : Codable, Hashable, Identifiable {
     var id : Int = 0
     var name : String = ""
     var description : String = ""
