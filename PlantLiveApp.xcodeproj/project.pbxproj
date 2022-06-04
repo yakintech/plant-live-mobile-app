@@ -30,6 +30,7 @@
 		DD9B9887284BEA0C004F3779 /* CategoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9B9886284BEA0C004F3779 /* CategoryDetailView.swift */; };
 		DD9B988A284BEB96004F3779 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DD9B9889284BEB96004F3779 /* Alamofire */; };
 		DD9B988C284BEE5E004F3779 /* tipsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9B988B284BEE5E004F3779 /* tipsModel.swift */; };
+		DD9B988E284BF38D004F3779 /* PlantListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9B988D284BF38D004F3779 /* PlantListModel.swift */; };
 		DDF85B3A283A484600BCA528 /* tabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF85B39283A484600BCA528 /* tabView.swift */; };
 		DDFB4B7A2840F1180035ADB2 /* tabbarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB4B792840F1180035ADB2 /* tabbarScreen.swift */; };
 		DDFB4B7C2840F4A60035ADB2 /* tabViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB4B7B2840F4A60035ADB2 /* tabViewScreen.swift */; };
@@ -62,6 +63,7 @@
 		430DE3F2283A4C6A008760A3 /* ForgotPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordScreen.swift; sourceTree = "<group>"; };
 		DD9B9886284BEA0C004F3779 /* CategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailView.swift; sourceTree = "<group>"; };
 		DD9B988B284BEE5E004F3779 /* tipsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsModel.swift; sourceTree = "<group>"; };
+		DD9B988D284BF38D004F3779 /* PlantListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListModel.swift; sourceTree = "<group>"; };
 		DDF85B39283A484600BCA528 /* tabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabView.swift; sourceTree = "<group>"; };
 		DDFB4B792840F1180035ADB2 /* tabbarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbarScreen.swift; sourceTree = "<group>"; };
 		DDFB4B7B2840F4A60035ADB2 /* tabViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabViewScreen.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				1D5B9C692830E22F002698E9 /* Category.swift */,
+				DD9B988D284BF38D004F3779 /* PlantListModel.swift */,
 				1D5B9C6B2830E465002698E9 /* Plant.swift */,
 				1DB7545F283A1EEB00E9ABB9 /* Product.swift */,
 				430DE3F2283A4C6A008760A3 /* ForgotPasswordScreen.swift */,
@@ -278,6 +281,7 @@
 				1D3A366F282FB0E800021F30 /* PlantLiveAppApp.swift in Sources */,
 				03B2685D283BCFF800CAAA68 /* ProfilePlantList.swift in Sources */,
 				1D5B9C722830E86A002698E9 /* AboutScreen.swift in Sources */,
+				DD9B988E284BF38D004F3779 /* PlantListModel.swift in Sources */,
 				DD9B988C284BEE5E004F3779 /* tipsModel.swift in Sources */,
 				430DE3F3283A4C6A008760A3 /* ForgotPasswordScreen.swift in Sources */,
 				1D5B9C742830F44E002698E9 /* PlantDetail.swift in Sources */,

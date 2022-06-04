@@ -20,7 +20,7 @@ struct categoryScreen: View {
             
             ForEach(plants, id:\.self){item in
                 
-                NavigationLink(destination: PlantDetail(name: item.name, description: item.description)){
+                NavigationLink(destination: CategoryDetailView()){
                     
                     VStack{
                         RoundedRectangle(cornerRadius: 20)
