@@ -18,10 +18,4 @@ struct Plant : Hashable {
     
 }
 
-struct tipType : Hashable{
-    var name : String = ""
-    var image : String = ""
-    var id : UUID = UUID()
-
-}
 
