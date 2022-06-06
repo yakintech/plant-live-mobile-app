@@ -42,7 +42,7 @@ struct ProfilePlantList: View {
                     .font(.title2)
                     .fontWeight(.light)
                     .foregroundColor(.white)
-                    .padding(.bottom, 5.0), alignment: .bottom)
+                    .padding(.bottom, 3.0), alignment: .bottom)
               }
             }
           }
