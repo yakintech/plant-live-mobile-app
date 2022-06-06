@@ -9,11 +9,10 @@ import SwiftUI
 
 struct ProfilePlantList: View {
   
-  @State var plants = ["cicek", "grass", "ot2", "greenPlant", "lotus", "indoorPlant", "ot", "cactus"]
+  @State var plants = ["devetabani", "grass", "ot2", "greenPlant", "lotus", "cicek", "ot", "cactus"]
   
-  let columns = [GridItem(spacing: -10),
-                 GridItem()
-  ]
+  let columns = [GridItem(.flexible(minimum: 120, maximum: 300 )),
+                 GridItem()]
   
   var body: some View {
     
@@ -33,20 +32,24 @@ struct ProfilePlantList: View {
               VStack {
                 Image(item)
                   .resizable()
-                  .frame(width: 160, height: 160)
-                  .background(RoundedRectangle(cornerRadius: 20)
-                    .stroke(LinearGradient(colors: [Color("defaultgreen"), Color("olivine")], startPoint: .bottomTrailing, endPoint: .topLeading), lineWidth: 5))
-                Text(item)
-                  .frame(width: 120, height: 30)
-                  .background(LinearGradient(colors: [Color("defaultgreen"), Color("olivine")], startPoint: .bottom, endPoint: .top))
-                  .cornerRadius(20)
-                  .foregroundColor(.white)
+                  .scaledToFit()
+                  .frame(width: 180, height: 180)
+                  .overlay(Rectangle()
+                    .background(.thinMaterial)
+                    .frame(height: 30)
+                    .opacity(0.3), alignment: .bottom)
+                  .overlay(Text(item)
+                    .font(.title2)
+                    .fontWeight(.light)
+                    .foregroundColor(.white)
+                    .padding(.bottom, 5.0), alignment: .bottom)
               }
             }
           }
         }
       }
     }
+    .padding(.horizontal)
     .background(Color("mintcream"))
   }
 }
