@@ -44,6 +44,7 @@
 		DDFB4B802840F5CD0035ADB2 /* categoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB4B7F2840F5CD0035ADB2 /* categoryScreen.swift */; };
 		DDFB4B822840F6F10035ADB2 /* homeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB4B812840F6F00035ADB2 /* homeView.swift */; };
 		F3A78265285115B900C2C755 /* PlantVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A78264285115B900C2C755 /* PlantVM.swift */; };
+		F3A78267285117BA00C2C755 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A78266285117BA00C2C755 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		DDFB4B7F2840F5CD0035ADB2 /* categoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryScreen.swift; sourceTree = "<group>"; };
 		DDFB4B812840F6F00035ADB2 /* homeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeView.swift; sourceTree = "<group>"; };
 		F3A78264285115B900C2C755 /* PlantVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantVM.swift; sourceTree = "<group>"; };
+		F3A78266285117BA00C2C755 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 			children = (
 				1D5B9C732830F44E002698E9 /* PlantDetail.swift */,
 				F3A78264285115B900C2C755 /* PlantVM.swift */,
+				F3A78266285117BA00C2C755 /* MapView.swift */,
 			);
 			path = PlantDetail;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				B34F112C28510D440005D67D /* RegisterModel.swift in Sources */,
 				1D3A3671282FB0E800021F30 /* ContentView.swift in Sources */,
 				03AB1980283799030095DC2D /* ChangePassword.swift in Sources */,
+				F3A78267285117BA00C2C755 /* MapView.swift in Sources */,
 				DDFB4B822840F6F10035ADB2 /* homeView.swift in Sources */,
 				1D5B9C702830E823002698E9 /* HomeScreen.swift in Sources */,
 				1D5B9C6C2830E465002698E9 /* Plant.swift in Sources */,
