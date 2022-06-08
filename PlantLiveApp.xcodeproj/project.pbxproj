@@ -11,6 +11,7 @@
 		03AB1980283799030095DC2D /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB197F283799030095DC2D /* ChangePassword.swift */; };
 		03B2685A283A7BCF00CAAA68 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B26859283A7BCF00CAAA68 /* EditProfile.swift */; };
 		03B2685D283BCFF800CAAA68 /* ProfilePlantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B2685C283BCFF800CAAA68 /* ProfilePlantList.swift */; };
+		1BC73D7C285122ED003DC491 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC73D7B285122ED003DC491 /* CircleImage.swift */; };
 		1D3A366F282FB0E800021F30 /* PlantLiveAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3A366E282FB0E800021F30 /* PlantLiveAppApp.swift */; };
 		1D3A3671282FB0E800021F30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3A3670282FB0E800021F30 /* ContentView.swift */; };
 		1D3A3673282FB0EA00021F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D3A3672282FB0EA00021F30 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		03AB197F283799030095DC2D /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		03B26859283A7BCF00CAAA68 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
 		03B2685C283BCFF800CAAA68 /* ProfilePlantList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePlantList.swift; sourceTree = "<group>"; };
+		1BC73D7B285122ED003DC491 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		1D3A366B282FB0E800021F30 /* PlantLiveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantLiveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3A366E282FB0E800021F30 /* PlantLiveAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantLiveAppApp.swift; sourceTree = "<group>"; };
 		1D3A3670282FB0E800021F30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				1D5B9C732830F44E002698E9 /* PlantDetail.swift */,
 				F3A78264285115B900C2C755 /* PlantVM.swift */,
 				F3A78266285117BA00C2C755 /* MapView.swift */,
+				1BC73D7B285122ED003DC491 /* CircleImage.swift */,
 			);
 			path = PlantDetail;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				DDFB4B7A2840F1180035ADB2 /* tabbarScreen.swift in Sources */,
 				03AB197E283793180095DC2D /* ProfilePage.swift in Sources */,
 				B34F112C28510D440005D67D /* RegisterModel.swift in Sources */,
+				1BC73D7C285122ED003DC491 /* CircleImage.swift in Sources */,
 				1D3A3671282FB0E800021F30 /* ContentView.swift in Sources */,
 				03AB1980283799030095DC2D /* ChangePassword.swift in Sources */,
 				F3A78267285117BA00C2C755 /* MapView.swift in Sources */,
