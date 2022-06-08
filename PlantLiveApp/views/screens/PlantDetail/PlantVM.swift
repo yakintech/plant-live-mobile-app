@@ -35,20 +35,13 @@ class PlantVM {
     
     
     init(_ plantId: String) {
+        var plantToPass: Plant?
+        let request = AF.request("https://plankton-app-jr8ee.ondigitalocean.app/api/plants/\(plantId)")
+        request.responseDecodable(of: Plant.self){ response in
+            plantToPass = response.value
+        }
+        print(plantToPass ?? "Plant web'den çekilemedi.")
         self.plantId = plantId
-        self.plant = Plant()
-        
-        
-        
-//        //TODO -2 "force-unwraps"
-//
-//        var plantToPass: Plant?
-//        let request = AF.request("https://plankton-app-jr8ee.ondigitalocean.app/api/plants/\(plantId)")
-//        request.responseDecodable(of: Plant.self){ response in
-//            plantToPass = response.value!
-//        }
-//        print(plantToPass!)
-//        self.plantId = plantId
-//        plant = plantToPass!
+        plant = plantToPass ?? Plant()
     }
 }
