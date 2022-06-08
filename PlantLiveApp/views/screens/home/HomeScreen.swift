@@ -25,14 +25,14 @@ struct HomeScreen: View {
     @State var selectedTab : Int = 0
     
     @State var plants : [Plant] = [
-        Plant(name: "Outdoor", description: "Çok severiz", image: "lotus"),
-        Plant(name: "Indoor", description: "Çok yaşar", image: "indoorPlant"),
-        Plant(name: "Garden", description: "Bejamin Button", image: "ot"),
-        Plant(name: "Flowering Plants", description: "Su istemez", image: "cicek"),
-        Plant(name: "Green Plants", description: "çok pahalı...", image: "greenPlant"),
-        Plant(name: "Cactus", description: "çok pahalı...", image: "cactus"),
-        Plant(name: "Trees", description: "çok pahalı...", image: "tree"),
-        Plant(name: "Agricultural Crops", description: "çok pahalı...", image: "seftali")
+        Plant(name: "Outdoor", description: "Çok severiz", img: "lotus"),
+        Plant(name: "Indoor", description: "Çok yaşar", img: "indoorPlant"),
+        Plant(name: "Garden", description: "Bejamin Button", img: "ot"),
+        Plant(name: "Flowering Plants", description: "Su istemez", img: "cicek"),
+        Plant(name: "Green Plants", description: "çok pahalı...", img: "greenPlant"),
+        Plant(name: "Cactus", description: "çok pahalı...", img: "cactus"),
+        Plant(name: "Trees", description: "çok pahalı...", img: "tree"),
+        Plant(name: "Agricultural Crops", description: "çok pahalı...", img: "seftali")
     ]
     
     @State var search : String = ""

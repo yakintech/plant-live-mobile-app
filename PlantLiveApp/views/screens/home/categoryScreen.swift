@@ -45,7 +45,7 @@ struct categoryScreen: View {
                                 .padding(15)
                                 .overlay(
                                     HStack {
-                                        Image(item.image)
+                                        Image(item.img)
                                             .resizable()
                                             .frame(width: 180, height: 190)
                                             .padding()

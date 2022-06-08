@@ -12,11 +12,11 @@ struct PlantListScreen: View {
     
     
     var plants : [Plant] = [
-        Plant(name: "Deve Tabanı", description: "Çok severiz", image: "devetabani"),
-        Plant(name: "Peygamber Kılıcı", description: "Çok yaşar", image: "devetabani"),
-        Plant(name: "Benjamin", description: "Bejamin Button", image: "devetabani"),
-        Plant(name: "Kaktüs", description: "Su istemez", image: "devetabani"),
-        Plant(name: "Orkide", description: "çok pahalı...", image: "devetabani")
+        Plant(name: "Deve Tabanı", description: "Çok severiz", img:"devetabani"),
+        Plant(name: "Peygamber Kılıcı", description: "Çok yaşar", img: "devetabani"),
+        Plant(name: "Benjamin", description: "Bejamin Button", img: "devetabani"),
+        Plant(name: "Kaktüs", description: "Su istemez", img: "devetabani"),
+        Plant(name: "Orkide", description: "çok pahalı...", img: "devetabani")
     ]
     
     
@@ -26,30 +26,31 @@ struct PlantListScreen: View {
     ]
     
     var body: some View {
+        Text("")
         
-        NavigationView{
-            LazyVGrid(columns: columns, spacing: 20) {
-                
-                ForEach(plants, id:\.self){item in
-                    
-                    NavigationLink(destination: PlantDetail(name: item.name, description: item.description)){
-                        
-                        VStack{
-                            Image(item.image)
-                                .resizable()
-                                .frame(width: 50.0, height: 50.0)
-                            Text(item.name)
-                            
-                           
-                        }
-                        
-                   }
-                }
-                
-            }
-            .navigationTitle("Plant List")
-            
-        }
+//        NavigationView{
+//            LazyVGrid(columns: columns, spacing: 20) {
+//
+//                ForEach(plants, id:\.self){item in
+//
+//                    NavigationLink(destination: PlantDetail(forId: "")){
+//
+//                        VStack{
+//                            Image(item.image)
+//                                .resizable()
+//                                .frame(width: 50.0, height: 50.0)
+//                            Text(item.name)
+//
+//
+//                        }
+//
+//                   }
+//                }
+//
+//            }
+//            .navigationTitle("Plant List")
+//
+//        }
         
      
         

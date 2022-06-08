@@ -27,7 +27,7 @@ struct ProfilePlantList: View {
         LazyVGrid(columns: columns, spacing: 10) {
           ForEach(plants, id:\.self) { item in
             
-            NavigationLink(destination: PlantDetail(name: item, description: item.description)){
+            NavigationLink(destination: PlantDetail(forId: "")){
               
               VStack {
                 Image(item)

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NewPlantDetail: View {
+struct PlantDetail: View {
     init(forId plantId: String) {
         plant = PlantVM(plantId)
     }
@@ -51,6 +51,6 @@ struct NewPlantDetail: View {
 
 struct NewPlantDetail_Previews: PreviewProvider {
     static var previews: some View {
-        NewPlantDetail(forId: "629c81407cf041db9ca231d0")
+        PlantDetail(forId: "629c81407cf041db9ca231d0")
     }
 }
