@@ -2,7 +2,7 @@
 //  ForgotPasswordScreen.swift
 //  PlantLiveApp
 //
-//  Created by Alp Orkun Gungor on 18.05.2022.
+//  Created by Sena Kurtak on 8.06.2022.
 //
 
 import SwiftUI
