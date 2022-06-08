@@ -24,6 +24,7 @@ struct PlantDetail: View {
                 CircleImage(imageName: plant.imageName)
                     .offset(y: -130)
                     .padding(.bottom, -130)
+                
             }
 
             VStack(alignment: .leading) {
