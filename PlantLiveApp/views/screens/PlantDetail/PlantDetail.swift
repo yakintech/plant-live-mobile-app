@@ -13,7 +13,7 @@ struct PlantDetail: View {
     }
         
     private let plant: PlantVM
-    
+    @State var plantDetailOthersImage = false
     var body: some View {
         VStack {
             
@@ -21,9 +21,13 @@ struct PlantDetail: View {
                 MapView(coordinates: plant.coordinates)
                     .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
-                CircleImage(imageName: plant.imageName)
-                    .offset(y: -130)
+                Button(action: {
+                    self.plantDetailOthersImage = true
+                }, label: {
+                    CircleImage(imageName: plant.imageName)
+                }).offset(y: -130)
                     .padding(.bottom, -130)
+                    .sheet(isPresented: self.$plantDetailOthersImage, content: {PlantDetailBigImage()})
                 
             }
 
