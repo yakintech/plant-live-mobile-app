@@ -15,7 +15,11 @@ struct CircleImage: View {
             .resizable()
             .clipShape(Circle())
             .overlay {
-                Circle().stroke(.green, lineWidth:  4)
+                Circle().stroke(Color(
+                    red: 104/255,
+                    green: 141/255,
+                    blue: 70/255,
+                    opacity: 1.0), lineWidth:  4)
             }
             .shadow(radius: 7)
     }

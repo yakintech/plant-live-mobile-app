@@ -22,12 +22,12 @@ struct PlantDetail: View {
                     .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
                 Button(action: {
-                    self.plantDetailOthersImage = true
+                    self.plantDetailOthersImage.toggle()
                 }, label: {
                     CircleImage(imageName: plant.imageName)
                 }).offset(y: -130)
                     .padding(.bottom, -130)
-                    .sheet(isPresented: self.$plantDetailOthersImage, content: {PlantDetailBigImage()})
+                    .sheet(isPresented: self.$plantDetailOthersImage, content: {PlantDetailBigImage(imageName: plant.imageName)})
                 
             }
 
