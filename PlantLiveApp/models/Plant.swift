@@ -17,8 +17,7 @@ struct Plant : Hashable, Decodable {
     var longitude: String = "28.976778"
     var latitude: String = "41.024447"
     var categoryId: String = "Plant's categoryId"
-    var countryOfOrigin: String = "Plant's origin"
-    
+    var countryOfOrigin: String = "Plant's origin"    
 }
 
 

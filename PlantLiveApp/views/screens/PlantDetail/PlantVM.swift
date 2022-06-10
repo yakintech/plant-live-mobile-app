@@ -9,9 +9,10 @@ import Foundation
 import CoreLocation
 import Alamofire
 
-class PlantVM {
-    let plantId: String
-    private var plant: Plant
+class PlantVM: ObservableObject {
+    private let apiEndPoint = "https://plankton-app-jr8ee.ondigitalocean.app/api/plants/"
+    var plantId: String = ""
+    @Published private var plant = Plant()
     
     var countryOfOrigin: String {
         plant.countryOfOrigin
@@ -35,13 +36,10 @@ class PlantVM {
     
     
     init(_ plantId: String) {
-        var plantToPass: Plant?
-        let request = AF.request("https://plankton-app-jr8ee.ondigitalocean.app/api/plants/\(plantId)")
-        request.responseDecodable(of: Plant.self){ response in
-            plantToPass = response.value
-        }
-        print(plantToPass ?? "Plant web'den çekilemedi.")
         self.plantId = plantId
-        plant = plantToPass ?? Plant()
+        let request = AF.request("\(apiEndPoint)\(plantId)")
+        request.responseDecodable(of: Plant.self){ response in
+            self.plant = response.value ?? Plant()
+        }
     }
 }

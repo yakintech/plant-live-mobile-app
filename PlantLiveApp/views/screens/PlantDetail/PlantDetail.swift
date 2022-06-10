@@ -12,7 +12,7 @@ struct PlantDetail: View {
         plant = PlantVM(plantId)
     }
         
-    private let plant: PlantVM
+    @ObservedObject private var plant: PlantVM
     @State var plantDetailOthersImage = false
     var body: some View {
         VStack {
