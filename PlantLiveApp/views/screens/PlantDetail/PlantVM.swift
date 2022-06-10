@@ -10,7 +10,7 @@ import CoreLocation
 import Alamofire
 
 class PlantVM: ObservableObject {
-    private let apiEndPointUrl = "https://plankton-app-jr8ee.ondigitalocean.app/api/plants/"
+    private let apiEndPointUrl = "https://plankton-app-jr8ee.ondigitalocean.app/api/plants"
     var plantId: String = ""
     @Published private var plant = Plant()
     
@@ -37,7 +37,7 @@ class PlantVM: ObservableObject {
     
     init(_ plantId: String) {
         self.plantId = plantId
-        let request = AF.request("\(apiEndPointUrl)\(plantId)")
+        let request = AF.request("\(apiEndPointUrl)/\(plantId)")
         request.responseDecodable(of: Plant.self){ response in
             self.plant = response.value ?? Plant()
         }
