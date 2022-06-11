@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct LoginScreen: View {
-    @State private var userNameLogIn = ""
-    @State private var passwordLogIn = ""
+    @State var loginModel = LoginModel()
+    @State var goProfileScreen = false
     
     var body: some View {
         ZStack{
@@ -25,31 +25,60 @@ struct LoginScreen: View {
                     .fontWeight(.bold)
                 Spacer()
                 VStack{
-                    TextField("Email:",text: $userNameLogIn)
+                    TextField("Email:",text: $loginModel.email)
                         .textFieldStyle(.roundedBorder)
                         .frame(width: 370)
-                    SecureField("Password:",text: $passwordLogIn)
+                        .textInputAutocapitalization(.never)
+                    SecureField("Password:",text: $loginModel.password)
                         .textFieldStyle(.roundedBorder)
                         .frame(width: 370)
                     HStack{
-                        Text("Log In")
-                            .foregroundColor(Color(red: 104/255,green: 141/255,blue: 70/255,opacity: 1.0))
-                            .frame(width: 370, height: 50)
-                            .background(Color(red: 104/255,green: 141/255,blue: 70/255,opacity: 0.5))
-                            .cornerRadius(30)
+                        Button("Log In"){
+                            
+                            let userRepo = UserRepository()
+                            
+                            userRepo.login(loginModel: loginModel){ data in
+                                
+                                let userDefaultService = UserDefaultService()
+                                
+                                userDefaultService.setLoginStorage(email: loginModel.email)
+                                
+                                goProfileScreen = true
+                                
+                            }
+                             
+                            
+                        }
+                        .foregroundColor(Color(red: 104/255,green: 141/255,blue: 70/255,opacity: 1.0))
+                        .frame(width: 370, height: 50)
+                        .background(Color(red: 104/255,green: 141/255,blue: 70/255,opacity: 0.5))
+                        .cornerRadius(30)
                     }
                     HStack{
                         Text("Forgot your password?")
                             .fontWeight(.bold)
                             .foregroundColor(Color(red: 104/255,green: 141/255,blue: 70/255,opacity: 1.0))
                             .padding()
+                        
                     }
+                    
+                    NavigationLink(destination: RegisterScreen()){
+                        Text("Create an account")
+                            .fontWeight(.bold)
+                            .foregroundColor(Color(red: 104/255,green: 141/255,blue: 70/255,opacity: 1.0))
+                            .padding()
+                    }
+                    
+                    
+                    NavigationLink("", destination: ProfilePage(), isActive: $goProfileScreen)
+                    
                     Spacer()
                 }
                 .padding(25)
             }
             .padding(30)
             .background(.white)
+            
         }
     }
 }

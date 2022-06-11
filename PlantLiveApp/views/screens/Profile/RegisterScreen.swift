@@ -11,9 +11,7 @@ import Alamofire
 
 struct RegisterScreen: View {
     @State var registerModel: RegisterModel = RegisterModel()
-    @State private var userName = ""
-    @State private var password = ""
-    @State private var email = ""
+    @State var showConfirmScreen = false
     
     
     var body: some View {
@@ -31,14 +29,6 @@ struct RegisterScreen: View {
             .background(.white)
             VStack{
                 VStack{
-                    //                    HStack{
-                    //                        Image(systemName: "person.circle")
-                    //                        TextField("Name:",text: $userName)
-                    //                        Spacer()
-                    //                            .background(.white)
-                    //                    }
-                    //                    .padding()
-                    //                    Divider()
                     HStack{
                         Image(systemName: "at")
                         TextField("Email:",text: $registerModel.email)
@@ -85,14 +75,14 @@ struct RegisterScreen: View {
                         .background(.white)
                         HStack{
                             Button("Create an account"){
-                                var userrepo = UserRepository()
+                                let userrepo = UserRepository()
                                 
                                 userrepo.register(registerModel: registerModel) { _ in
-                                    print("dönüş başarılı")
-                                    
+                                   
+                                    //Eğer işlem başarılıysa confirmCode ekranına gidecek!!
+                                    showConfirmScreen = true
+                                    print("OKEY!")
                                 }
-                                
-                                
                                 
                             }
                             .foregroundColor(.white)
@@ -101,6 +91,9 @@ struct RegisterScreen: View {
                             .background(Color(red: (104/250), green: 141/250, blue: 102/250))
                             .cornerRadius(100)
                             .opacity(0.7)
+                            
+                            
+                            NavigationLink("", destination:  RegisterEMailConfirmCodeScreen(email: registerModel.email), isActive: $showConfirmScreen)
                         }
                     }
                 }
