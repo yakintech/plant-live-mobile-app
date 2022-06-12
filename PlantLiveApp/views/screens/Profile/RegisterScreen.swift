@@ -15,7 +15,8 @@ struct RegisterScreen: View {
     @State var visibleFirst = false
     @State var visibleSecond = false
     @State var color = Color.black.opacity(0.7)
-    
+    @State var checkedSubscribe = false
+    @State var checkedTerms = false
     
     var body: some View {
         
@@ -54,9 +55,7 @@ struct RegisterScreen: View {
                         }){
                             Image(systemName: self.visibleFirst ? "eye.slash.fill" : "eye.fill").foregroundColor(self.color)
                         }
-                        
                     }
-                    
                     .padding()
                     Divider()
                     
@@ -80,7 +79,11 @@ struct RegisterScreen: View {
                     .padding()
                     VStack{
                         HStack{
-                            Image(systemName: "circle")
+                            Image(systemName: checkedSubscribe ? "checkmark.square.fill" : "square")
+                                .foregroundColor(checkedSubscribe ? Color(red: (104/250), green: 141/250, blue: 102/250) : Color.secondary)
+                                .onTapGesture {
+                                    self.checkedSubscribe.toggle()
+                                }
                                 .padding()
                             Text("Unsubscribe from the mailing list")
                             Spacer()
@@ -88,11 +91,15 @@ struct RegisterScreen: View {
                             
                         }
                         HStack{
-                            Image(systemName: "circle")
+                            Image(systemName: checkedTerms ? "checkmark.square.fill" : "square")
+                                .foregroundColor(checkedTerms ? Color(red: (104/250), green: 141/250, blue: 102/250) : Color.secondary)
+                                .onTapGesture {
+                                    self.checkedTerms.toggle()
+                                }
                                 .padding()
                             Text("I accept the Terms of use")
                             Spacer()
-                                .background(.white)
+                            .background(.white)
                             
                         }
                         .background(.white)
