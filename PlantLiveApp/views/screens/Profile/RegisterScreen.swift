@@ -15,6 +15,8 @@ struct RegisterScreen: View {
     @State var visibleFirst = false
     @State var visibleSecond = false
     @State var color = Color.black.opacity(0.7)
+    @State var whiteBackGroundColor = Color.white.opacity(0.5)
+
     @State var checkedSubscribe = false
     @State var checkedTerms = false
     
@@ -36,7 +38,6 @@ struct RegisterScreen: View {
                         TextField("Email:",text: $registerModel.email)
                             .textInputAutocapitalization(.never)
                         Spacer()
-                            .background(.white)
                     }
                     .padding()
                     Divider()
@@ -87,7 +88,6 @@ struct RegisterScreen: View {
                                 .padding()
                             Text("Unsubscribe from the mailing list")
                             Spacer()
-                                .background(.white)
                             
                         }
                         HStack{
@@ -99,7 +99,6 @@ struct RegisterScreen: View {
                                 .padding()
                             Text("I accept the Terms of use")
                             Spacer()
-                            .background(.white)
                             
                         }
                         .background(.white)
@@ -143,7 +142,7 @@ struct RegisterScreen: View {
             .background(.white)
             Spacer()
         }
-        .background(.black)
+        .background(Color(red: (104/250), green: 141/250, blue: 102/250).opacity(0.4))
     }
 }
 
