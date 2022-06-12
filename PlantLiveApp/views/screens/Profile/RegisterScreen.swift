@@ -12,18 +12,19 @@ import Alamofire
 struct RegisterScreen: View {
     @State var registerModel: RegisterModel = RegisterModel()
     @State var showConfirmScreen = false
+    @State var visibleFirst = false
+    @State var visibleSecond = false
+    @State var color = Color.black.opacity(0.7)
     
     
     var body: some View {
         
         VStack{
-            HStack{
-                Image(systemName: "arrow.left")
-                    .padding(20)
-                    .foregroundColor(Color(red: (58/250), green: 58/250, blue: 58/250))
-                    .padding(30)
-                Text("Create an account")
-                Spacer()
+            VStack{
+                Text("Create an Account 🌱")
+                    .foregroundColor(Color(red: 104/255,green: 141/255,blue: 70/255,opacity: 1.0))
+                    .font(.title)
+                    .fontWeight(.bold)
             }
             .frame(width: 450 , height: 50)
             .background(.white)
@@ -40,19 +41,41 @@ struct RegisterScreen: View {
                     Divider()
                     HStack{
                         Image(systemName: "lock.circle")
-                        SecureField("Password:",text: $registerModel.password)
-                        Spacer()
-                        Image(systemName: "eye")
-                            .background(.white)
+                        VStack{
+                            if self.visibleFirst{
+                                TextField("Password", text: $registerModel.password)
+                            }
+                            else {
+                                SecureField("Password", text: $registerModel.password)
+                            }
+                        }
+                        Button(action: {
+                            self.visibleFirst.toggle()
+                        }){
+                            Image(systemName: self.visibleFirst ? "eye.slash.fill" : "eye.fill").foregroundColor(self.color)
+                        }
+                        
                     }
                     
                     .padding()
                     Divider()
+                    
                     HStack{
+                        
                         Image(systemName: "lock.circle")
-                        TextField("Password confirm:",text: $registerModel.confirmpassword)
-                        Spacer()
-                        Image(systemName: "eye")
+                        VStack{
+                            if self.visibleSecond{
+                                TextField("Password", text: $registerModel.confirmpassword)
+                            }
+                            else {
+                                SecureField("Password", text: $registerModel.confirmpassword)
+                            }
+                        }
+                        Button(action: {
+                            self.visibleSecond.toggle()
+                        }){
+                            Image(systemName: self.visibleSecond ? "eye.slash.fill" : "eye.fill").foregroundColor(self.color)
+                        }
                     }
                     .padding()
                     VStack{
@@ -78,12 +101,11 @@ struct RegisterScreen: View {
                                 let userrepo = UserRepository()
                                 
                                 userrepo.register(registerModel: registerModel) { _ in
-                                   
+                                    
                                     //Eğer işlem başarılıysa confirmCode ekranına gidecek!!
                                     showConfirmScreen = true
                                     print("OKEY!")
                                 }
-                                
                             }
                             .foregroundColor(.white)
                             .padding()
@@ -106,19 +128,15 @@ struct RegisterScreen: View {
             }
             VStack{
                 Text("Already have an account?")
-                Text("Log in")
+                NavigationLink(destination: LoginScreen()){
+                    Text("Log in")
+                }
             }
             .frame(width: 370 , height: 100)
             .background(.white)
-            //.background(Color(red: (96/250), green: 89/250, blue: 89/250))
             Spacer()
-            
         }
-        
         .background(.black)
-        
-        
-        
     }
 }
 

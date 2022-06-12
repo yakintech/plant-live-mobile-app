@@ -28,11 +28,4 @@ class UserDefaultService {
         
         return email ?? ""
     }
-    
-    
-    
-    
-    
-    
-
 }

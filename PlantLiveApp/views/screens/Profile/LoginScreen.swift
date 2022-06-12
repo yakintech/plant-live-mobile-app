@@ -14,12 +14,12 @@ struct LoginScreen: View {
     var body: some View {
         ZStack{
             VStack{
-                Text("Welcome back!")
+                Text("Welcome 🌱")
                     .foregroundColor(Color(red: 104/255,green: 141/255,blue: 70/255,opacity: 1.0))
                     .font(.title)
                     .fontWeight(.bold)
                     .padding(20)
-                Text("Enter your user details below to sign in toyour accont")
+                Text("Enter your user details below to sign in to your accont")
                     .foregroundColor(Color(red: 104/255,green: 141/255,blue: 70/255,opacity: 1.0))
                     .font(.caption)
                     .fontWeight(.bold)
