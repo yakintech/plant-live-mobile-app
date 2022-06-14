@@ -11,7 +11,7 @@ struct ProfilePlantList: View {
   
   @State var plants = ["devetabani", "grass", "ot2", "greenPlant", "lotus", "cicek", "ot", "cactus"]
   
-  let columns = [GridItem(.flexible(minimum: 120, maximum: 300 )),
+  let columns = [GridItem(.flexible(minimum: 100, maximum: 180)),
                  GridItem()]
   
   var body: some View {
@@ -49,8 +49,7 @@ struct ProfilePlantList: View {
         }
       }
     }
-    .padding(.horizontal)
-    .background(Color("mintcream"))
+    .padding(.horizontal, 10.0)
   }
 }
 
