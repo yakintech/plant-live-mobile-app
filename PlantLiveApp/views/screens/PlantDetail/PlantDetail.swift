@@ -57,5 +57,16 @@ struct PlantDetail: View {
 struct NewPlantDetail_Previews: PreviewProvider {
     static var previews: some View {
         PlantDetail(forId: "629c81407cf041db9ca231d0")
+            .previewDevice(PreviewDevice(rawValue: "iPhone 13 Pro"))
+            .previewDisplayName("iPhone 13 Pro")
+        PlantDetail(forId: "629c81407cf041db9ca231d0")
+            .previewDevice(PreviewDevice(rawValue: "iPhone 13"))
+            .previewDisplayName("iPhone 13")
+        PlantDetail(forId: "629c81407cf041db9ca231d0")
+            .previewDevice(PreviewDevice(rawValue: "iPhone 13 Pro Max"))
+            .previewDisplayName("iPhone 13 Pro Max")
+        PlantDetail(forId: "629c81407cf041db9ca231d0")
+            .previewDevice(PreviewDevice(rawValue: "iPhone 13 mini"))
+            .previewDisplayName("iPhone 13 mini")
     }
 }
