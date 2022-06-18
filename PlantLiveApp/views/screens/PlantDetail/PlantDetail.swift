@@ -56,7 +56,7 @@ struct PlantDetail: View {
     }
     
     private struct Settings {
-        static let fontName: String = "Luminari-Regular"
+        static let fontName: String = "Chalkduster"
         static let sizeforBodyFonts: CGFloat = 17
         static let sizeforTitleFonts: CGFloat = 28
         static let sizeforTitle2Fonts: CGFloat = 22
