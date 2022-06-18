@@ -34,24 +34,34 @@ struct PlantDetail: View {
 
                 VStack(alignment: .leading) {
                     Text(plant.name)
-                        .font(.title)
+                        .font(Font.custom(Settings.fontName, size: Settings.sizeforTitleFonts))
                     HStack {
                         Text(plant.countryOfOrigin)
                         Spacer()
 
                     }
-                    .font(.subheadline)
+                    .font(Font.custom(Settings.fontName, size: Settings.sizeforSubheadlineFonts))
                     .foregroundColor(.secondary)
 
                     Divider()
                     Text("About \(plant.name)")
-                        .font(.title2)
+                        .font(Font.custom(Settings.fontName, size: Settings.sizeforTitle2Fonts))
                     Text(plant.description)
+                        .font(Font.custom(Settings.fontName, size: Settings.sizeforBodyFonts))
                 }
                 .padding()
                 Spacer()
             }
         }
+    }
+    
+    private struct Settings {
+        static let fontName: String = "Luminari-Regular"
+        static let sizeforBodyFonts: CGFloat = 17
+        static let sizeforTitleFonts: CGFloat = 28
+        static let sizeforTitle2Fonts: CGFloat = 22
+        static let sizeforSubheadlineFonts: CGFloat = 15
+
     }
 }
 

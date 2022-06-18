@@ -52,6 +52,10 @@
 		DDFB4B7E2840F51C0035ADB2 /* tipsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB4B7D2840F51C0035ADB2 /* tipsScreen.swift */; };
 		DDFB4B802840F5CD0035ADB2 /* categoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB4B7F2840F5CD0035ADB2 /* categoryScreen.swift */; };
 		DDFB4B822840F6F10035ADB2 /* homeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB4B812840F6F00035ADB2 /* homeView.swift */; };
+		F3885D3B285DCE5F0050807C /* Herculanum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3885D32285DCE5E0050807C /* Herculanum.ttf */; };
+		F3885D3E285DCE5F0050807C /* Trattatello.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3885D35285DCE5F0050807C /* Trattatello.ttf */; };
+		F3885D41285DCE5F0050807C /* Luminari.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3885D38285DCE5F0050807C /* Luminari.ttf */; };
+		F3885D42285DCE5F0050807C /* Chalkduster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3885D39285DCE5F0050807C /* Chalkduster.ttf */; };
 		F3A78265285115B900C2C755 /* PlantVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A78264285115B900C2C755 /* PlantVM.swift */; };
 		F3A78267285117BA00C2C755 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A78266285117BA00C2C755 /* MapView.swift */; };
 /* End PBXBuildFile section */
@@ -102,6 +106,11 @@
 		DDFB4B7D2840F51C0035ADB2 /* tipsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsScreen.swift; sourceTree = "<group>"; };
 		DDFB4B7F2840F5CD0035ADB2 /* categoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryScreen.swift; sourceTree = "<group>"; };
 		DDFB4B812840F6F00035ADB2 /* homeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeView.swift; sourceTree = "<group>"; };
+		F3885D32285DCE5E0050807C /* Herculanum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Herculanum.ttf; sourceTree = "<group>"; };
+		F3885D35285DCE5F0050807C /* Trattatello.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trattatello.ttf; sourceTree = "<group>"; };
+		F3885D38285DCE5F0050807C /* Luminari.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Luminari.ttf; sourceTree = "<group>"; };
+		F3885D39285DCE5F0050807C /* Chalkduster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chalkduster.ttf; sourceTree = "<group>"; };
+		F3885D44285DCF240050807C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F3A78264285115B900C2C755 /* PlantVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantVM.swift; sourceTree = "<group>"; };
 		F3A78266285117BA00C2C755 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +162,7 @@
 		1D3A366D282FB0E800021F30 /* PlantLiveApp */ = {
 			isa = PBXGroup;
 			children = (
+				F3885D44285DCF240050807C /* Info.plist */,
 				B34F111F28510B6A0005D67D /* Services */,
 				B34F112228510B9D0005D67D /* Network */,
 				1D5B9C6D2830E539002698E9 /* views */,
@@ -162,6 +172,7 @@
 				1D3A3672282FB0EA00021F30 /* Assets.xcassets */,
 				1D3A3674282FB0EA00021F30 /* Preview Content */,
 				DDF85B39283A484600BCA528 /* tabView.swift */,
+				F3885D31285DCE4C0050807C /* Fonts */,
 			);
 			path = PlantLiveApp;
 			sourceTree = "<group>";
@@ -275,6 +286,17 @@
 			path = CategoryDetail;
 			sourceTree = "<group>";
 		};
+		F3885D31285DCE4C0050807C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F3885D39285DCE5F0050807C /* Chalkduster.ttf */,
+				F3885D32285DCE5E0050807C /* Herculanum.ttf */,
+				F3885D38285DCE5F0050807C /* Luminari.ttf */,
+				F3885D35285DCE5F0050807C /* Trattatello.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,8 +361,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3885D3B285DCE5F0050807C /* Herculanum.ttf in Resources */,
+				F3885D3E285DCE5F0050807C /* Trattatello.ttf in Resources */,
 				1D3A3676282FB0EA00021F30 /* Preview Assets.xcassets in Resources */,
 				1D3A3673282FB0EA00021F30 /* Assets.xcassets in Resources */,
+				F3885D42285DCE5F0050807C /* Chalkduster.ttf in Resources */,
+				F3885D41285DCE5F0050807C /* Luminari.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +555,7 @@
 				DEVELOPMENT_TEAM = TM25KMJQD5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlantLiveApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -560,6 +587,7 @@
 				DEVELOPMENT_TEAM = TM25KMJQD5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlantLiveApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
