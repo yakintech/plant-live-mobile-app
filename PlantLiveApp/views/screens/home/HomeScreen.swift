@@ -19,9 +19,7 @@ struct HomeScreen: View {
         tipType(name: "Seed", image: "seed"),
         tipType(name: "Tools", image: "tool"),
         tipType(name: "Pesticices", image: "ilac")
-        
     ]
-    
     @State var selectedTab : Int = 0
     
     @State var plants : [Plant] = [
@@ -34,16 +32,12 @@ struct HomeScreen: View {
         Plant(name: "Trees", description: "çok pahalı...", img: "tree"),
         Plant(name: "Agricultural Crops", description: "çok pahalı...", img: "seftali")
     ]
-    
     @State var search : String = ""
-    
     var body: some View {
         
         ZStack {
             VStack{
                 tabbarHomeScreen(tips: $tips, selectedTab: $selectedTab, plants: $plants, search: $search, tip: $tip)
-              
-
             }
         }
     }
