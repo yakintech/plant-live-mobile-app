@@ -22,7 +22,7 @@ struct categoryScreen: View {
         VStack {
             LazyVGrid(columns: columns, spacing: 20) {
                 
-                ForEach(plants, id:\.self){item in
+                ForEach(plants, id:\.self._id){item in
                     
     //                NavigationLink(destination: CategoryDetailView()){
                     Button(action: {

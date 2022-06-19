@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Plant : Hashable, Decodable {
+struct Plant :  Decodable {
     
     var _id: String = "629c81407cf041db9ca231d0"
     var name: String = "Plant's name"
