@@ -24,6 +24,10 @@
 		1D5B9C762830FA1C002698E9 /* PlantListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B9C752830FA1C002698E9 /* PlantListScreen.swift */; };
 		1DB7545E283A1EBF00E9ABB9 /* ProductListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7545D283A1EBF00E9ABB9 /* ProductListScreen.swift */; };
 		1DB75460283A1EEB00E9ABB9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7545F283A1EEB00E9ABB9 /* Product.swift */; };
+		1DC3954F285F0CB600448CC7 /* PlantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC3954E285F0CB600448CC7 /* PlantRepository.swift */; };
+		1DC39552285F0D5300448CC7 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC39551285F0D5300448CC7 /* ApiConfig.swift */; };
+		1DC39554285F11F900448CC7 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC39553285F11F900448CC7 /* Home.swift */; };
+		1DC39556285F289F00448CC7 /* TipRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC39555285F289F00448CC7 /* TipRepository.swift */; };
 		1DCB70B52838DA41000DA5EC /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB70B42838DA41000DA5EC /* CategoryList.swift */; };
 		1DCB70B72838FFFF000DA5EC /* AddCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB70B62838FFFF000DA5EC /* AddCategory.swift */; };
 		1DD2C0AB28547F690063ECBA /* RegisterEMailConfirmCodeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2C0AA28547F690063ECBA /* RegisterEMailConfirmCodeScreen.swift */; };
@@ -83,6 +87,10 @@
 		1D5B9C752830FA1C002698E9 /* PlantListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListScreen.swift; sourceTree = "<group>"; };
 		1DB7545D283A1EBF00E9ABB9 /* ProductListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListScreen.swift; sourceTree = "<group>"; };
 		1DB7545F283A1EEB00E9ABB9 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		1DC3954E285F0CB600448CC7 /* PlantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRepository.swift; sourceTree = "<group>"; };
+		1DC39551285F0D5300448CC7 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		1DC39553285F11F900448CC7 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		1DC39555285F289F00448CC7 /* TipRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipRepository.swift; sourceTree = "<group>"; };
 		1DCB70B42838DA41000DA5EC /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
 		1DCB70B62838FFFF000DA5EC /* AddCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategory.swift; sourceTree = "<group>"; };
 		1DD2C0AA28547F690063ECBA /* RegisterEMailConfirmCodeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEMailConfirmCodeScreen.swift; sourceTree = "<group>"; };
@@ -169,6 +177,7 @@
 		1D3A366D282FB0E800021F30 /* PlantLiveApp */ = {
 			isa = PBXGroup;
 			children = (
+				1DC39550285F0D1400448CC7 /* env */,
 				B34F111F28510B6A0005D67D /* Services */,
 				B34F112228510B9D0005D67D /* Network */,
 				1D5B9C6D2830E539002698E9 /* views */,
@@ -179,6 +188,7 @@
 				1D3A3674282FB0EA00021F30 /* Preview Content */,
 				DDF85B39283A484600BCA528 /* tabView.swift */,
 				F3885D31285DCE4C0050807C /* Fonts */,
+				1DC39553285F11F900448CC7 /* Home.swift */,
 			);
 			path = PlantLiveApp;
 			sourceTree = "<group>";
@@ -234,6 +244,14 @@
 			path = screens;
 			sourceTree = "<group>";
 		};
+		1DC39550285F0D1400448CC7 /* env */ = {
+			isa = PBXGroup;
+			children = (
+				1DC39551285F0D5300448CC7 /* ApiConfig.swift */,
+			);
+			path = env;
+			sourceTree = "<group>";
+		};
 		1DD3B54F283A50F900C21EF7 /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +302,8 @@
 			isa = PBXGroup;
 			children = (
 				B34F112328510BCE0005D67D /* UserRepository.swift */,
+				1DC3954E285F0CB600448CC7 /* PlantRepository.swift */,
+				1DC39555285F289F00448CC7 /* TipRepository.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -406,6 +426,7 @@
 				DDFB4B822840F6F10035ADB2 /* homeView.swift in Sources */,
 				1D5B9C702830E823002698E9 /* HomeScreen.swift in Sources */,
 				1D5B9C6C2830E465002698E9 /* Plant.swift in Sources */,
+				1DC39556285F289F00448CC7 /* TipRepository.swift in Sources */,
 				1DD3B551283A512500C21EF7 /* Header.swift in Sources */,
 				1D5B9C762830FA1C002698E9 /* PlantListScreen.swift in Sources */,
 				1D3A366F282FB0E800021F30 /* PlantLiveAppApp.swift in Sources */,
@@ -416,6 +437,7 @@
 				DD9B988C284BEE5E004F3779 /* tipsModel.swift in Sources */,
 				1D5B9C742830F44E002698E9 /* PlantDetail.swift in Sources */,
 				DD9B9887284BEA0C004F3779 /* CategoryDetailView.swift in Sources */,
+				1DC3954F285F0CB600448CC7 /* PlantRepository.swift in Sources */,
 				43D9283E28513495007FA09D /* PlantScreen.swift in Sources */,
 				B3042AE7285E7C5B0043C5B5 /* PesticicedScreen.swift in Sources */,
 				B34F112428510BCE0005D67D /* UserRepository.swift in Sources */,
@@ -426,6 +448,8 @@
 				DDFB4B7C2840F4A60035ADB2 /* tabViewScreen.swift in Sources */,
 				B34F112A28510C9E0005D67D /* ForgotPasswordScreen.swift in Sources */,
 				B3042AE3285E7C3D0043C5B5 /* SeedScreen.swift in Sources */,
+				1DC39554285F11F900448CC7 /* Home.swift in Sources */,
+				1DC39552285F0D5300448CC7 /* ApiConfig.swift in Sources */,
 				F3A78265285115B900C2C755 /* PlantVM.swift in Sources */,
 				DDF85B3A283A484600BCA528 /* tabView.swift in Sources */,
 				1DCB70B72838FFFF000DA5EC /* AddCategory.swift in Sources */,
@@ -580,6 +604,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = senakurtak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -612,6 +637,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = senakurtak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

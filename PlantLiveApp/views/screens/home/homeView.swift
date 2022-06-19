@@ -25,8 +25,6 @@ struct HomeView : View{
                 opacity: 1.0)
                 .ignoresSafeArea(.all)
             
-            NavigationView{
-                
                 ScrollView{
                     
                     VStack{
@@ -45,10 +43,6 @@ struct HomeView : View{
                         .navigationBarHidden(true)
                 }
                 
-                
-                
-            }
-            
         }
     }
 }

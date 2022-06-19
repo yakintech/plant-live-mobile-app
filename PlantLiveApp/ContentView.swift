@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+   
+    
     @State var loginStatus : Bool = false
     
     @State var tips : [String] = [
@@ -39,55 +41,65 @@ struct ContentView: View {
         
         
     ]
-    
-    
-    
+
     
     @State var search : String = ""
     
     var body: some View {
         
-        NavigationView{
+    
             
             TabView(selection: $selectedTab) {
            
-                    HomeView(tips: $tips, selectedTab: $selectedTab, plants: $plants, search: $search, tip: $tip).tabItem {
-                        Image(systemName: "leaf.arrow.triangle.circlepath")
-                        Text("Plant")
-                    }.tag(0)
-                    
+                
+                NavigationView{
+                    HomeView(tips: $tips, selectedTab: $selectedTab, plants: $plants, search: $search, tip: $tip)
+                }
+                .tabItem {
+                    Image(systemName: "leaf.arrow.triangle.circlepath")
+                    Text("Plant")
+                }.tag(0)
+                
+                 
+                NavigationView{
                     Text("Alarm")
-                        .tabItem {
-                            Image(systemName: "alarm")
-                            Text("Alarm")
-                        }.tag(1)
-                        .badge(5)
+                }
+                .tabItem {
+                    Image(systemName: "alarm")
+                    Text("Alarm")
+                }.tag(1)
+                .badge(5)
+                
                     
-                    
+                 
+                      
+                NavigationView{
                     MainProfilePageScreen()
-                               .tabItem {
-                                   Image(systemName: "brain.head.profile")
-                                   Text("Profile")
-                               }.tag(2)
+                }
+                .tabItem {
+                    Image(systemName: "brain.head.profile")
+                    Text("Profile")
+                }.tag(2)
+                    
+                    
+                   
 
             }
+            .onAppear(){
+                let userDefaultService = UserDefaultService()
+                
+                let email = userDefaultService.getLoginStorage()
+                
+                if(email == ""){
+                    loginStatus = false
+                }
+                else{
+                    loginStatus = true
+                }
+            }
+        
       
-            
-        }
-        .onAppear(){
-            
-            let userDefaultService = UserDefaultService()
-            
-            let email = userDefaultService.getLoginStorage()
-            
-            if(email == ""){
-                loginStatus = false
-            }
-            else{
-                loginStatus = true
-            }
-            
-        }
+      
       
     }
 }

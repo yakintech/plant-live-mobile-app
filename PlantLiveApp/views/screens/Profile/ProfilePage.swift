@@ -6,8 +6,9 @@ struct ProfilePage: View {
   @State private var isPressed = false
   
   var body: some View {
-    NavigationView {
+
       ZStack {
+          
         VStack {
           HStack {
             Image("jackHarlow")
@@ -50,10 +51,7 @@ struct ProfilePage: View {
           ProfilePlantList()
         }
       }
-      .navigationTitle(Text("Pofile Page"))
-      .navigationBarHidden(true)
-      .navigationBarBackButtonHidden(true)
-    }
+      
   }
 }
 

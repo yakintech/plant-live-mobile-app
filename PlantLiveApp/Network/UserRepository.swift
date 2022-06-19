@@ -6,13 +6,12 @@
 //
 
 import Foundation
-
 import Alamofire
 
 class UserRepository{
     
     
-    func login(loginModel: LoginModel, completionHandler: @escaping(LoginResponseModel) -> Void){
+     func login(loginModel: LoginModel, completionHandler: @escaping(LoginResponseModel) -> Void){
         
         
         
@@ -23,10 +22,9 @@ class UserRepository{
         ]
         
         
-        AF.request("https://plankton-app-jr8ee.ondigitalocean.app/api/users/login", method: .post, parameters: requestModel, encoding: JSONEncoding.default)
+        AF.request(ApiConfig.baseUrl + "/api/users/login", method: .post, parameters: requestModel, encoding: JSONEncoding.default)
             .responseDecodable(of: LoginResponseModel.self){ response in
                 
-                print(response)
                 completionHandler(response.value!)
                 
             }
@@ -46,7 +44,7 @@ class UserRepository{
         ]
         
         
-        AF.request("https://plankton-app-jr8ee.ondigitalocean.app/api/users/register", method: .post, parameters: requestModel, encoding: JSONEncoding.default)
+        AF.request(ApiConfig.baseUrl + "/api/users/register", method: .post, parameters: requestModel, encoding: JSONEncoding.default)
             .responseDecodable(of: RegisterResponseModel.self){ response in
                 
           
@@ -66,7 +64,7 @@ class UserRepository{
         ]
         
         
-        AF.request("https://plankton-app-jr8ee.ondigitalocean.app/api/confirm", method: .post, parameters: requestModel, encoding: JSONEncoding.default)
+        AF.request( ApiConfig.baseUrl +  "/api/confirm", method: .post, parameters: requestModel, encoding: JSONEncoding.default)
             .responseDecodable(of: ConfirmCodeResponseModel.self){ response in
                 
           
