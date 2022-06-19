@@ -13,17 +13,11 @@ import Alamofire
 class PlantRepository {
     
     func getAll(completionHandler: @escaping ([Plant]) -> Void) {
-        
-        
-
-        
-        var plants : [Plant] = []
         let request2 = AF.request("\(ApiConfig.baseUrl)/api/plants/")
         request2.responseDecodable(of: [Plant].self){ response in
             completionHandler(response.value!)
+            print(response.value!)
         }
-    
-        
     }
     
     func getByID(Id: String, completionHandler: @escaping (Plant) -> Void) {
@@ -32,8 +26,6 @@ class PlantRepository {
         request.responseDecodable(of: Plant.self){ response in
             completionHandler(response.value!)
         }
-    
-        
     }
     
     

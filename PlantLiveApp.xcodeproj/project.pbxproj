@@ -65,6 +65,7 @@
 		F3885D3E285DCE5F0050807C /* Trattatello.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3885D35285DCE5F0050807C /* Trattatello.ttf */; };
 		F3885D41285DCE5F0050807C /* Luminari.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3885D38285DCE5F0050807C /* Luminari.ttf */; };
 		F3885D42285DCE5F0050807C /* Chalkduster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3885D39285DCE5F0050807C /* Chalkduster.ttf */; };
+		F3A5B40D285F90B900AA9A9B /* PlantListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5B40C285F90B900AA9A9B /* PlantListVM.swift */; };
 		F3A78265285115B900C2C755 /* PlantVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A78264285115B900C2C755 /* PlantVM.swift */; };
 		F3A78267285117BA00C2C755 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A78266285117BA00C2C755 /* MapView.swift */; };
 /* End PBXBuildFile section */
@@ -128,6 +129,7 @@
 		F3885D35285DCE5F0050807C /* Trattatello.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trattatello.ttf; sourceTree = "<group>"; };
 		F3885D38285DCE5F0050807C /* Luminari.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Luminari.ttf; sourceTree = "<group>"; };
 		F3885D39285DCE5F0050807C /* Chalkduster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chalkduster.ttf; sourceTree = "<group>"; };
+		F3A5B40C285F90B900AA9A9B /* PlantListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListVM.swift; sourceTree = "<group>"; };
 		F3A78264285115B900C2C755 /* PlantVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantVM.swift; sourceTree = "<group>"; };
 		F3A78266285117BA00C2C755 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -285,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				58A65947285F3D14004B347B /* PlantListView.swift */,
+				F3A5B40C285F90B900AA9A9B /* PlantListVM.swift */,
 			);
 			path = PlantList;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				1D5B9C742830F44E002698E9 /* PlantDetail.swift in Sources */,
 				DD9B9887284BEA0C004F3779 /* CategoryDetailView.swift in Sources */,
 				1DC3954F285F0CB600448CC7 /* PlantRepository.swift in Sources */,
+				F3A5B40D285F90B900AA9A9B /* PlantListVM.swift in Sources */,
 				43D9283E28513495007FA09D /* PlantScreen.swift in Sources */,
 				B3042AE7285E7C5B0043C5B5 /* PesticicedScreen.swift in Sources */,
 				B34F112428510BCE0005D67D /* UserRepository.swift in Sources */,

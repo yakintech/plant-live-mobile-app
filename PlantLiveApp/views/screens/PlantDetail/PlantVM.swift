@@ -39,7 +39,7 @@ class PlantVM: ObservableObject {
         self.plantId = plantId
         let request = AF.request("\(apiEndPointUrl)/\(plantId)")
         request.responseDecodable(of: Plant.self){ response in
-            self.plant = response.value ?? Plant()
+            self.plant = response.value!
         }
     }
 }

@@ -46,8 +46,10 @@ struct PlantDetail: View {
                     Divider()
                     Text("About \(plant.name)")
                         .font(Font.custom(Settings.fontName, size: Settings.sizeforTitle2Fonts))
-                    Text(plant.description)
-                        .font(Font.custom(Settings.fontName, size: Settings.sizeforBodyFonts))
+                    ScrollView {
+                        Text(plant.description)
+                            .font(Font.custom(Settings.fontName, size: Settings.sizeforBodyFonts))
+                    }
                 }
                 .padding()
                 Spacer()
@@ -67,17 +69,17 @@ struct PlantDetail: View {
 
 struct NewPlantDetail_Previews: PreviewProvider {
     static var previews: some View {
-        PlantDetail(forId: "629c81407cf041db9ca231d0")
-            .previewDevice(PreviewDevice(rawValue: "iPhone 13 Pro"))
-            .previewDisplayName("iPhone 13 Pro")
-        PlantDetail(forId: "629c81407cf041db9ca231d0")
-            .previewDevice(PreviewDevice(rawValue: "iPhone 13"))
-            .previewDisplayName("iPhone 13")
-        PlantDetail(forId: "629c81407cf041db9ca231d0")
-            .previewDevice(PreviewDevice(rawValue: "iPhone 13 Pro Max"))
-            .previewDisplayName("iPhone 13 Pro Max")
-        PlantDetail(forId: "629c81407cf041db9ca231d0")
-            .previewDevice(PreviewDevice(rawValue: "iPhone 13 mini"))
-            .previewDisplayName("iPhone 13 mini")
+        PlantDetail(forId: "62af65157027470e84cf01ce")
+//            .previewDevice(PreviewDevice(rawValue: "iPhone 13 Pro"))
+//            .previewDisplayName("iPhone 13 Pro")
+//        PlantDetail(forId: "629c81407cf041db9ca231d0")
+//            .previewDevice(PreviewDevice(rawValue: "iPhone 13"))
+//            .previewDisplayName("iPhone 13")
+//        PlantDetail(forId: "629c81407cf041db9ca231d0")
+//            .previewDevice(PreviewDevice(rawValue: "iPhone 13 Pro Max"))
+//            .previewDisplayName("iPhone 13 Pro Max")
+//        PlantDetail(forId: "629c81407cf041db9ca231d0")
+//            .previewDevice(PreviewDevice(rawValue: "iPhone 13 mini"))
+//            .previewDisplayName("iPhone 13 mini")
     }
 }
