@@ -15,44 +15,59 @@ struct PlantDetail: View {
     @ObservedObject private var plant: PlantVM
     @State var plantDetailOthersImage = false
     var body: some View {
-        GeometryReader { geometry in
-            VStack {
+        NavigationView{
+            GeometryReader { geometry in
                 VStack {
-                    MapView(coordinates: plant.coordinates)
-                        .ignoresSafeArea(edges: .top)
-                    .frame(height: 300)
+                    VStack {
+                        MapView(coordinates: plant.coordinates)
+                            .ignoresSafeArea(edges: .top)
+                        .frame(height: 300)
+                        Button(action: {
+                            self.plantDetailOthersImage.toggle()
+                        }, label: {
+                            CircleImage(imageName: plant.imageName)
+                        }).offset(y: -130)
+                            .padding(.bottom, -130)
+                            .sheet(isPresented: self.$plantDetailOthersImage, content: {PlantDetailBigImage(imageName: plant.imageName)})
+                        
+                    }
+                    .frame(height: geometry.size.height / 2)
+
+                    VStack(alignment: .leading) {
+                        Text(plant.name)
+                            .font(Font.custom(Settings.fontName, size: Settings.sizeforTitleFonts))
+                        HStack {
+                            Text(plant.countryOfOrigin)
+                            Spacer()
+
+                        }
+                        .font(Font.custom(Settings.fontName, size: Settings.sizeforSubheadlineFonts))
+                        .foregroundColor(.secondary)
+
+                        Divider()
+                        Text("About \(plant.name)")
+                            .font(Font.custom(Settings.fontName, size: Settings.sizeforTitle2Fonts))
+                        ScrollView {
+                            Text(plant.description)
+                                .font(Font.custom(Settings.fontName, size: Settings.sizeforBodyFonts))
+                        }
+                    }
+                    .padding()
+                    Spacer()
+                }.navigationBarItems(trailing:
+                                        HStack{
+                    Spacer()
                     Button(action: {
-                        self.plantDetailOthersImage.toggle()
-                    }, label: {
-                        CircleImage(imageName: plant.imageName)
-                    }).offset(y: -130)
-                        .padding(.bottom, -130)
-                        .sheet(isPresented: self.$plantDetailOthersImage, content: {PlantDetailBigImage(imageName: plant.imageName)})
-                    
-                }
-                .frame(height: geometry.size.height / 2)
-
-                VStack(alignment: .leading) {
-                    Text(plant.name)
-                        .font(Font.custom(Settings.fontName, size: Settings.sizeforTitleFonts))
-                    HStack {
-                        Text(plant.countryOfOrigin)
-                        Spacer()
-
-                    }
-                    .font(Font.custom(Settings.fontName, size: Settings.sizeforSubheadlineFonts))
-                    .foregroundColor(.secondary)
-
-                    Divider()
-                    Text("About \(plant.name)")
-                        .font(Font.custom(Settings.fontName, size: Settings.sizeforTitle2Fonts))
-                    ScrollView {
-                        Text(plant.description)
-                            .font(Font.custom(Settings.fontName, size: Settings.sizeforBodyFonts))
-                    }
-                }
-                .padding()
-                Spacer()
+                        
+                    } ,label: {
+                        Image(systemName: "heart")
+                            .padding()
+                    })
+                                            
+                                            
+                                        }.foregroundColor(.white)
+                                            .frame(width: 375, height: 10)
+                                            .padding())
             }
         }
     }
