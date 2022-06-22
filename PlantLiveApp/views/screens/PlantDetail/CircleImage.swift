@@ -14,8 +14,7 @@ struct CircleImage: View {
         AsyncImage(url: URL(string: imageName),
                    content: { image in image.resizable()},
                    placeholder: { Image("tree") }
-        )
-            .clipShape(Circle())
+        )            .clipShape(Circle())
             .overlay {
                 Circle().stroke(Color(
                     red: 104/255,
@@ -24,6 +23,7 @@ struct CircleImage: View {
                     opacity: 1.0), lineWidth:  4)
             }
             .shadow(radius: 7)
+            
     }
 }
 

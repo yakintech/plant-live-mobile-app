@@ -25,8 +25,8 @@ struct PlantDetail: View {
                         Button(action: {
                             self.plantDetailOthersImage.toggle()
                         }, label: {
-                            CircleImage(imageName: plant.imageName)
-                        }).offset(y: -130)
+                            CircleImage(imageName: plant.imageName).frame(width: 210, height: 210)
+                        }).offset(y: -100)
                             .padding(.bottom, -130)
                             .sheet(isPresented: self.$plantDetailOthersImage, content: {PlantDetailBigImage(imageName: plant.imageName)})
                         

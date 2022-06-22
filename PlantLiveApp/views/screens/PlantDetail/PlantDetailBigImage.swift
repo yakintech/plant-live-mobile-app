@@ -11,8 +11,10 @@ struct PlantDetailBigImage: View {
     let imageName: String
     
     var body: some View {
-        Image(imageName)
-            .resizable()
+        AsyncImage(url: URL(string: imageName),
+                   content: { image in image.resizable()},
+                   placeholder: { Image("tree") }
+        )
             .frame(width: 375, height: 400, alignment: .center)
             .cornerRadius(10)
             .border(Color(
