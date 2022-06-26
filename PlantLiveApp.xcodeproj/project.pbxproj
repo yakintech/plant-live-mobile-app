@@ -25,7 +25,6 @@
 		1DB7545E283A1EBF00E9ABB9 /* ProductListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7545D283A1EBF00E9ABB9 /* ProductListScreen.swift */; };
 		1DB75460283A1EEB00E9ABB9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7545F283A1EEB00E9ABB9 /* Product.swift */; };
 		1DC3954F285F0CB600448CC7 /* PlantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC3954E285F0CB600448CC7 /* PlantRepository.swift */; };
-		1DC39552285F0D5300448CC7 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC39551285F0D5300448CC7 /* ApiConfig.swift */; };
 		1DC39554285F11F900448CC7 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC39553285F11F900448CC7 /* Home.swift */; };
 		1DC39556285F289F00448CC7 /* TipRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC39555285F289F00448CC7 /* TipRepository.swift */; };
 		1DCB70B52838DA41000DA5EC /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB70B42838DA41000DA5EC /* CategoryList.swift */; };
@@ -61,6 +60,7 @@
 		DDFB4B7E2840F51C0035ADB2 /* tipsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB4B7D2840F51C0035ADB2 /* tipsScreen.swift */; };
 		DDFB4B802840F5CD0035ADB2 /* categoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB4B7F2840F5CD0035ADB2 /* categoryScreen.swift */; };
 		DDFB4B822840F6F10035ADB2 /* homeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB4B812840F6F00035ADB2 /* homeView.swift */; };
+		F2ADD06828684D4B00DC4EA6 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ADD06728684D4B00DC4EA6 /* ApiConfig.swift */; };
 		F3885D3B285DCE5F0050807C /* Herculanum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3885D32285DCE5E0050807C /* Herculanum.ttf */; };
 		F3885D3E285DCE5F0050807C /* Trattatello.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3885D35285DCE5F0050807C /* Trattatello.ttf */; };
 		F3885D41285DCE5F0050807C /* Luminari.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3885D38285DCE5F0050807C /* Luminari.ttf */; };
@@ -90,7 +90,6 @@
 		1DB7545D283A1EBF00E9ABB9 /* ProductListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListScreen.swift; sourceTree = "<group>"; };
 		1DB7545F283A1EEB00E9ABB9 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		1DC3954E285F0CB600448CC7 /* PlantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRepository.swift; sourceTree = "<group>"; };
-		1DC39551285F0D5300448CC7 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
 		1DC39553285F11F900448CC7 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		1DC39555285F289F00448CC7 /* TipRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipRepository.swift; sourceTree = "<group>"; };
 		1DCB70B42838DA41000DA5EC /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
@@ -125,6 +124,7 @@
 		DDFB4B7D2840F51C0035ADB2 /* tipsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsScreen.swift; sourceTree = "<group>"; };
 		DDFB4B7F2840F5CD0035ADB2 /* categoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryScreen.swift; sourceTree = "<group>"; };
 		DDFB4B812840F6F00035ADB2 /* homeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeView.swift; sourceTree = "<group>"; };
+		F2ADD06728684D4B00DC4EA6 /* ApiConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
 		F3885D32285DCE5E0050807C /* Herculanum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Herculanum.ttf; sourceTree = "<group>"; };
 		F3885D35285DCE5F0050807C /* Trattatello.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trattatello.ttf; sourceTree = "<group>"; };
 		F3885D38285DCE5F0050807C /* Luminari.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Luminari.ttf; sourceTree = "<group>"; };
@@ -181,17 +181,16 @@
 		1D3A366D282FB0E800021F30 /* PlantLiveApp */ = {
 			isa = PBXGroup;
 			children = (
-				1DC39550285F0D1400448CC7 /* env */,
+				F2ADD06528684D4B00DC4EA6 /* Common */,
+				F2ADD06928684D5600DC4EA6 /* Resources */,
 				B34F111F28510B6A0005D67D /* Services */,
 				B34F112228510B9D0005D67D /* Network */,
 				1D5B9C6D2830E539002698E9 /* views */,
 				1D5B9C682830E1F1002698E9 /* models */,
 				1D3A366E282FB0E800021F30 /* PlantLiveAppApp.swift */,
 				1D3A3670282FB0E800021F30 /* ContentView.swift */,
-				1D3A3672282FB0EA00021F30 /* Assets.xcassets */,
 				1D3A3674282FB0EA00021F30 /* Preview Content */,
 				DDF85B39283A484600BCA528 /* tabView.swift */,
-				F3885D31285DCE4C0050807C /* Fonts */,
 				1DC39553285F11F900448CC7 /* Home.swift */,
 			);
 			path = PlantLiveApp;
@@ -247,14 +246,6 @@
 				1DB7545D283A1EBF00E9ABB9 /* ProductListScreen.swift */,
 			);
 			path = screens;
-			sourceTree = "<group>";
-		};
-		1DC39550285F0D1400448CC7 /* env */ = {
-			isa = PBXGroup;
-			children = (
-				1DC39551285F0D5300448CC7 /* ApiConfig.swift */,
-			);
-			path = env;
 			sourceTree = "<group>";
 		};
 		1DD3B54F283A50F900C21EF7 /* home */ = {
@@ -328,6 +319,39 @@
 				DD9B9886284BEA0C004F3779 /* CategoryDetailView.swift */,
 			);
 			path = CategoryDetail;
+			sourceTree = "<group>";
+		};
+		F2ADD06528684D4B00DC4EA6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F2ADD06628684D4B00DC4EA6 /* Constants */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F2ADD06628684D4B00DC4EA6 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F2ADD06728684D4B00DC4EA6 /* ApiConfig.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F2ADD06928684D5600DC4EA6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2ADD06A28684D6B00DC4EA6 /* Assets */,
+				F3885D31285DCE4C0050807C /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F2ADD06A28684D6B00DC4EA6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1D3A3672282FB0EA00021F30 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		F3885D31285DCE4C0050807C /* Fonts */ = {
@@ -465,7 +489,7 @@
 				B34F112A28510C9E0005D67D /* ForgotPasswordScreen.swift in Sources */,
 				B3042AE3285E7C3D0043C5B5 /* SeedScreen.swift in Sources */,
 				1DC39554285F11F900448CC7 /* Home.swift in Sources */,
-				1DC39552285F0D5300448CC7 /* ApiConfig.swift in Sources */,
+				F2ADD06828684D4B00DC4EA6 /* ApiConfig.swift in Sources */,
 				F3A78265285115B900C2C755 /* PlantVM.swift in Sources */,
 				DDF85B3A283A484600BCA528 /* tabView.swift in Sources */,
 				1DCB70B72838FFFF000DA5EC /* AddCategory.swift in Sources */,
@@ -615,6 +639,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -648,6 +673,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
