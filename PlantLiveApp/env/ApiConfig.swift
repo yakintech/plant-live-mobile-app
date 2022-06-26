@@ -1,5 +1,5 @@
 //
-//  ApiConfig.swift
+//  ApiConfig.swifts
 //  PlantLiveApp
 //
 //  Created by Çağatay Yıldız on 19.06.2022.
