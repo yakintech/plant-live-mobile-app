@@ -9,11 +9,13 @@ import SwiftUI
 
 struct HomeScreen: View {
     
-    @State var tips : [String] = [
-        "Plants", "Fertilizer", "Seed", "Tools", "Pesticices"
-    ]
+    @State var tips: [String] = ["Plants",
+                                  "Fertilizer",
+                                  "Seed",
+                                  "Tools",
+                                  "Pesticices"]
     
-    @State var tip : [tipType] = [
+    @State var tip: [tipType] = [
         tipType(name: "Plant", image: "planticon"),
         tipType(name: "Fertilizer", image: "gubre"),
         tipType(name: "Seed", image: "seed"),
