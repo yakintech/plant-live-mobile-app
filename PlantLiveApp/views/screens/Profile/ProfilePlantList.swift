@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfilePlantList: View {
   
-  @State var plants = ["devetabani", "grass", "ot2", "greenPlant", "lotus", "cicek", "ot", "cactus"]
+  @ObservedObject private var repo = PlantListVM()
   
   let columns = [GridItem(.flexible(minimum: 100, maximum: 180)),
                  GridItem()]
@@ -17,28 +17,23 @@ struct ProfilePlantList: View {
   var body: some View {
     
     VStack {
-      
       Divider()
       
       ScrollView(showsIndicators: false) {
         
-        Spacer()
-        
         LazyVGrid(columns: columns, spacing: 10) {
-          ForEach(plants, id:\.self) { item in
+          ForEach(repo.plants, id:\.self) { plant in
             
-            NavigationLink(destination: PlantDetail(forId: "")){
+            NavigationLink(destination: PlantDetail(forId: plant._id)){
               
               VStack {
-                Image(item)
-                  .resizable()
-                  .scaledToFit()
+                AsyncImage(url: URL(string: plant.img), content: { image in image.resizable()}, placeholder: { Image("tree")})
                   .frame(width: 180, height: 180)
                   .overlay(Rectangle()
                     .background(.thinMaterial)
                     .frame(height: 30)
                     .opacity(0.3), alignment: .bottom)
-                  .overlay(Text(item)
+                  .overlay(Text(plant.name)
                     .font(.title2)
                     .fontWeight(.light)
                     .foregroundColor(.white)
