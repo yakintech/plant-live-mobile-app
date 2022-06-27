@@ -28,6 +28,7 @@ struct LoginScreen: View {
                     TextField("Email:",text: $loginModel.email)
                         .textFieldStyle(.roundedBorder)
                         .frame(width: 370)
+                        .disableAutocorrection(true)
                         .textInputAutocapitalization(.never)
                     SecureField("Password:",text: $loginModel.password)
                         .textFieldStyle(.roundedBorder)
@@ -78,7 +79,7 @@ struct LoginScreen: View {
             }
             .padding(30)
             .background(.white)
-            
+            .navigationBarHidden(true)
         }
     }
 }
