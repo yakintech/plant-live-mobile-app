@@ -8,67 +8,77 @@ struct EditProfile: View {
   @State private var firstName = "Jack"
   @State private var lastName = "Harlow"
   @State private var mail = "jackharlow@gmail.com"
+  @State private var goLoginScreen = false
   @Environment(\.presentationMode) var presentationMode
+  @StateObject var loginStatus = LoginStatus()
   
   var body: some View {
-      ZStack {
-        VStack {
-          Image("jackHarlow")
-            .resizable()
-            .frame(width: 140, height: 140)
-            .clipShape(Circle())
-            .padding([.leading, .bottom, .trailing])
-          Button("Change Profile Photo") {
-            //Change Photo
-          }
-          
+    VStack {
+      Image("jackHarlow")
+        .resizable()
+        .frame(width: 140, height: 140)
+        .clipShape(Circle())
+        .padding([.leading, .bottom, .trailing])
+      Button("Change Profile Photo") {
+        //Change Photo
+      }
+      
+      Divider()
+      
+      Form {
+        HStack {
+          Image(systemName: "person.fill")
+            .padding(.horizontal, 8.0)
           Divider()
-          
-          Form {
-            HStack {
-              Image(systemName: "person.fill")
-                .padding(.horizontal, 8.0)
-              Divider()
-              TextField("First Name", text: $firstName)
-                .disableAutocorrection(true)
-                .autocapitalization(.none)
-            }
-            HStack {
-              Image(systemName: "person.3.fill")
-              Divider()
-              TextField("Last Name", text: $lastName)
-                .disableAutocorrection(true)
-                .autocapitalization(.none)
-            }
-            HStack {
-              Image(systemName: "envelope")
-                .padding(.horizontal, 7.0)
-              Divider()
-              TextField("Email", text: $mail)
-            }
-          }
+          TextField("First Name", text: $firstName)
+            .disableAutocorrection(true)
+            .autocapitalization(.none)
+        }
+        HStack {
+          Image(systemName: "person.3.fill")
           Divider()
-          NavigationLink(destination: ChangePassword()) {
-            Text("Change Password")
-              .fontWeight(.regular)
-              .foregroundColor(.red)
-              .font(.title3)
-              .padding(.bottom)
-          }
-          Spacer()
+          TextField("Last Name", text: $lastName)
+            .disableAutocorrection(true)
+            .autocapitalization(.none)
+        }
+        HStack {
+          Image(systemName: "envelope")
+            .padding(.horizontal, 7.0)
+          Divider()
+          TextField("Email", text: $mail)
         }
       }
-      .navigationBarTitle(Text("Edit Profile"), displayMode: .inline)
-      .navigationBarBackButtonHidden(true)
-      .toolbar {
-        ToolbarItem(placement: .navigationBarTrailing) {
-          Button("Done") {
-            presentationMode.wrappedValue.dismiss()
-          }
+      
+      Button("Logout") {
+        loginStatus.login = false
+        let userDefaultService = UserDefaultService()
+        userDefaultService.setLoginStorage(email: "")
+        goLoginScreen = true
+      }
+      
+      NavigationLink("", destination: LoginScreen(), isActive: $goLoginScreen)
+      
+      Divider()
+      
+      NavigationLink(destination: ChangePassword()) {
+        Text("Change Password")
+          .fontWeight(.regular)
+          .foregroundColor(.red)
+          .font(.title3)
+          .padding(.bottom)
+      }
+      Spacer()
+    }
+    .navigationBarTitle(Text("Edit Profile"), displayMode: .inline)
+    .toolbar {
+      ToolbarItem(placement: .navigationBarTrailing) {
+        Button("Done") {
+          presentationMode.wrappedValue.dismiss()
         }
       }
     }
   }
+}
 
 
 struct ProfilePage_Previews: PreviewProvider {

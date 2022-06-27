@@ -145,14 +145,14 @@
 		03B2685B283A7BF900CAAA68 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				B34F112528510C770005D67D /* RegisterScreen.swift */,
-				B34F112728510C8B0005D67D /* LoginScreen.swift */,
-				B34F112928510C9E0005D67D /* ForgotPasswordScreen.swift */,
 				03AB197D283793170095DC2D /* ProfilePage.swift */,
 				03B2685C283BCFF800CAAA68 /* ProfilePlantList.swift */,
 				03B26859283A7BCF00CAAA68 /* EditProfile.swift */,
 				03AB197F283799030095DC2D /* ChangePassword.swift */,
+				B34F112528510C770005D67D /* RegisterScreen.swift */,
+				B34F112728510C8B0005D67D /* LoginScreen.swift */,
 				1DD2C0AA28547F690063ECBA /* RegisterEMailConfirmCodeScreen.swift */,
+				B34F112928510C9E0005D67D /* ForgotPasswordScreen.swift */,
 				1DD2C0B02854A14B0063ECBA /* MainProfilePageScreen.swift */,
 			);
 			path = Profile;
