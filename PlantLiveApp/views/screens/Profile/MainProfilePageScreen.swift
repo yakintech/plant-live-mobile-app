@@ -7,38 +7,44 @@
 
 import SwiftUI
 
-struct MainProfilePageScreen: View {
-    
-    @State var loginStatus = false
-    
-    var body: some View {
-        VStack{
-            
-            if(loginStatus){
-                ProfilePage()
-            }
-            else{
-                LoginScreen()
-            }
-            
-        }
-        .onAppear(){
-            let userDefaultService = UserDefaultService()
-            
-            let email = userDefaultService.getLoginStorage()
+class LoginStatus: ObservableObject {
+  
+  @Published var login = false
+  
+}
 
-            if(email == ""){
-                loginStatus = false
-            }
-            else{
-                loginStatus = true
-            }
-        }
+struct MainProfilePageScreen: View {
+  
+  @StateObject var loginStatus = LoginStatus()
+  
+  var body: some View {
+    VStack{
+      
+      if(loginStatus.login){
+        ProfilePage()
+      }
+      else{
+        LoginScreen()
+      }
+      
     }
+    .onAppear(){
+      let userDefaultService = UserDefaultService()
+      
+      let email = userDefaultService.getLoginStorage()
+      
+      if(email == ""){
+        loginStatus.login = false
+      }
+      else{
+        loginStatus.login = true
+      }
+    }
+  }
 }
 
 struct MainProfilePageScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        MainProfilePageScreen()
-    }
+  static var previews: some View {
+    MainProfilePageScreen()
+  }
 }
