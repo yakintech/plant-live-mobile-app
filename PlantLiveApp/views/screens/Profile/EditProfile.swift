@@ -9,6 +9,7 @@ struct EditProfile: View {
   @State private var lastName = "Harlow"
   @State private var mail = "jackharlow@gmail.com"
   @State private var goLoginScreen = false
+  @State private var showAlert = false
   @Environment(\.presentationMode) var presentationMode
   @StateObject var loginStatus = LoginStatus()
   
@@ -49,24 +50,39 @@ struct EditProfile: View {
         }
       }
       
-      Button("Logout") {
-        loginStatus.login = false
-        let userDefaultService = UserDefaultService()
-        userDefaultService.setLoginStorage(email: "")
-        goLoginScreen = true
-      }
-      
-      NavigationLink("", destination: LoginScreen(), isActive: $goLoginScreen)
-      
-      Divider()
       
       NavigationLink(destination: ChangePassword()) {
         Text("Change Password")
           .fontWeight(.regular)
           .foregroundColor(.red)
           .font(.title3)
-          .padding(.bottom)
       }
+      
+      
+      Divider()
+      HStack {
+        Button("Log Out") {
+          showAlert = true
+        }
+        .font(.title3)
+        .foregroundColor(.red)
+        Image(systemName: "rectangle.portrait.and.arrow.right")
+          .foregroundColor(.red)
+          .font(.headline)
+      }.alert(isPresented: $showAlert) {
+        Alert(
+          title: Text("Are you sure you want to logout?"),
+          primaryButton: .destructive(Text("Log Out")) {
+            loginStatus.login = false
+            let userDefaultService = UserDefaultService()
+            userDefaultService.setLoginStorage(email: "")
+            goLoginScreen = true
+          },
+          secondaryButton: .cancel()
+        )
+      }
+      
+      NavigationLink("", destination: LoginScreen(), isActive: $goLoginScreen)
       Spacer()
     }
     .navigationBarTitle(Text("Edit Profile"), displayMode: .inline)
@@ -79,7 +95,6 @@ struct EditProfile: View {
     }
   }
 }
-
 
 struct ProfilePage_Previews: PreviewProvider {
   static var previews: some View {
