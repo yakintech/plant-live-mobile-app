@@ -27,7 +27,7 @@ struct ProfilePlantList: View {
             NavigationLink(destination: PlantDetail(forId: plant._id)){
               
               VStack {
-                AsyncImage(url: URL(string: plant.img), content: { image in image.resizable()}, placeholder: { Image("tree")})
+                  AsyncImage(url: URL(string: plant.img), content: { image in image.resizable()}, placeholder: { Image("tree").resizable()})
                   .frame(width: 180, height: 180)
                   .overlay(Rectangle()
                     .background(.thinMaterial)

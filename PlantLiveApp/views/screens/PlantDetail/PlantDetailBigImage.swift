@@ -13,7 +13,7 @@ struct PlantDetailBigImage: View {
     var body: some View {
         AsyncImage(url: URL(string: imageName),
                    content: { image in image.resizable()},
-                   placeholder: { Image("tree") }
+                   placeholder: { Image("tree").resizable() }
         )
             .frame(width: 375, height: 400, alignment: .center)
             .cornerRadius(10)

@@ -13,7 +13,7 @@ struct CircleImage: View {
     var body: some View {
         AsyncImage(url: URL(string: imageName),
                    content: { image in image.resizable()},
-                   placeholder: { Image("tree") }
+                   placeholder: { Image("tree").resizable() }
         )            .clipShape(Circle())
             .overlay {
                 Circle().stroke(Color(
