@@ -64,7 +64,6 @@
 		F3885D41285DCE5F0050807C /* Luminari.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3885D38285DCE5F0050807C /* Luminari.ttf */; };
 		F3885D42285DCE5F0050807C /* Chalkduster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3885D39285DCE5F0050807C /* Chalkduster.ttf */; };
 		F3A5B40D285F90B900AA9A9B /* PlantListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5B40C285F90B900AA9A9B /* PlantListVM.swift */; };
-		F3A78265285115B900C2C755 /* PlantVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A78264285115B900C2C755 /* PlantVM.swift */; };
 		F3A78267285117BA00C2C755 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A78266285117BA00C2C755 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
@@ -126,7 +125,6 @@
 		F3885D38285DCE5F0050807C /* Luminari.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Luminari.ttf; sourceTree = "<group>"; };
 		F3885D39285DCE5F0050807C /* Chalkduster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chalkduster.ttf; sourceTree = "<group>"; };
 		F3A5B40C285F90B900AA9A9B /* PlantListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListVM.swift; sourceTree = "<group>"; };
-		F3A78264285115B900C2C755 /* PlantVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantVM.swift; sourceTree = "<group>"; };
 		F3A78266285117BA00C2C755 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				1D5B9C732830F44E002698E9 /* PlantDetail.swift */,
-				F3A78264285115B900C2C755 /* PlantVM.swift */,
 				F3A78266285117BA00C2C755 /* MapView.swift */,
 				1BC73D7B285122ED003DC491 /* CircleImage.swift */,
 				58FE4A8C28526BC7002F5CF0 /* PlantDetailBigImage.swift */,
@@ -499,7 +496,6 @@
 				B34F112A28510C9E0005D67D /* ForgotPasswordScreen.swift in Sources */,
 				B3042AE3285E7C3D0043C5B5 /* SeedScreen.swift in Sources */,
 				F2ADD06828684D4B00DC4EA6 /* ApiConfig.swift in Sources */,
-				F3A78265285115B900C2C755 /* PlantVM.swift in Sources */,
 				1DCB70B72838FFFF000DA5EC /* AddCategory.swift in Sources */,
 				1DD2C0B32854A71F0063ECBA /* LoginModel.swift in Sources */,
 				1DB75460283A1EEB00E9ABB9 /* Product.swift in Sources */,

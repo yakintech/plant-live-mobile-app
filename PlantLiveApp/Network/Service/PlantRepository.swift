@@ -17,8 +17,8 @@ class PlantRepository {
     }
   }
   
-  func getByID(Id: String, completionHandler: @escaping (Plant) -> Void) {
-    let request = AF.request("\(ApiConfig.baseUrl)/api/plants/\(Id)")
+  func getByID(_ id: String, completionHandler: @escaping (Plant) -> Void) {
+    let request = AF.request("\(ApiConfig.baseUrl)/api/plants/\(id)")
     request.responseDecodable(of: Plant.self) { response in
       completionHandler(response.value!)
     }

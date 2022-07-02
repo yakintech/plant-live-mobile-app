@@ -24,7 +24,7 @@ struct ProfilePlantList: View {
         LazyVGrid(columns: columns, spacing: 10) {
           ForEach(repo.plants, id:\.self) { plant in
             
-            NavigationLink(destination: PlantDetail(forId: plant._id)){
+            NavigationLink(destination: PlantDetail(id: plant._id)){
               
               VStack {
                   AsyncImage(url: URL(string: plant.img), content: { image in image.resizable()}, placeholder: { Image("tree").resizable()})
