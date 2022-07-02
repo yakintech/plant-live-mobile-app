@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct PlantListView: View {
-    @ObservedObject private var repo = PlantListVM()
+    @State var plants: [Plant] = []
+    let repo = PlantRepository()
     
     let columns = [GridItem(.flexible(minimum: 100, maximum: 180)), GridItem()]
     
@@ -23,7 +24,7 @@ struct PlantListView: View {
           Spacer()
           
           LazyVGrid(columns: columns, spacing: 10) {
-              ForEach(repo.plants, id:\.self) { plant in
+              ForEach(plants, id:\.self) { plant in
               
                 NavigationLink(destination: PlantDetail(id: plant._id)){
                 
@@ -47,6 +48,11 @@ struct PlantListView: View {
         }
       }
       .padding(.horizontal, 10.0)
+      .onAppear() {
+          repo.getAll() { response in
+              plants = response
+          }
+      }
     }
 }
 
