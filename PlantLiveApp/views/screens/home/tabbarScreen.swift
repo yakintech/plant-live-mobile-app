@@ -13,7 +13,7 @@ struct tabbarHomeScreen: View{
     @Binding var selectedTab : Int
     @Binding var plants : [Plant]
     @Binding var search : String
-    @Binding var tip : [tipType]
+    @Binding var tip : [TipModel]
     
     var body: some View{
         

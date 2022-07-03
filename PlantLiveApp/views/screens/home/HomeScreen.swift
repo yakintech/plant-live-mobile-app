@@ -15,12 +15,12 @@ struct HomeScreen: View {
                                   "Tools",
                                   "Pesticices"]
     
-    @State var tip: [tipType] = [
-        tipType(name: "Plant", image: "planticon"),
-        tipType(name: "Fertilizer", image: "gubre"),
-        tipType(name: "Seed", image: "seed"),
-        tipType(name: "Tools", image: "tool"),
-        tipType(name: "Pesticices", image: "ilac")
+    @State var tip: [TipModel] = [
+        TipModel(name: "Plant", img: "planticon"),
+        TipModel(name: "Fertilizer", img: "gubre"),
+        TipModel(name: "Seed", img: "seed"),
+        TipModel(name: "Tools", img: "tool"),
+        TipModel(name: "Pesticices", img: "ilac")
     ]
     @State var selectedTab : Int = 0
     
